@@ -39,6 +39,9 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   const isCertificationPage = !!certificationMatch;
   const certification = certificationMatch ? certificationMatch[1] : null;
   
+  // VCA pages don't use sidebar (navigation is in header)
+  const isVCAPage = certification === 'vca';
+  
   // Check if we're on a handbook page (for backward compatibility)
   const isHandbookPage = pathname?.startsWith('/dashboard/handbook') && !isCertificationPage;
   
@@ -129,8 +132,8 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         </p>
       </SidebarHeader>
       <SidebarContent>
-        {isCertificationPage && certification ? (
-          /* Show Certification Navigation when on certification pages */
+        {isCertificationPage && certification && !isVCAPage ? (
+          /* Show Certification Navigation when on certification pages (except VCA) */
           <SidebarGroup>
             <SidebarGroupLabel className="flex items-center gap-2">
               <BookOpen className="h-4 w-4" />

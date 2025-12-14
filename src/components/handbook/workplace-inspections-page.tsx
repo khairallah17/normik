@@ -6,8 +6,10 @@ import { Button } from "@/components/ui/button"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
 import { Checkbox } from "@/components/ui/checkbox"
 import { useTranslations } from 'next-intl'
-import { Search, ChevronLeft, ChevronRight, ChevronsLeft, ChevronsRight, BarChart3, ClipboardList, Calendar, Settings } from "lucide-react"
+import { ChevronLeft, ChevronRight, ChevronsLeft, ChevronsRight } from "lucide-react"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+import { VCANavigation } from "@/components/vca-navigation"
+import { Link } from "@/i18n/routing"
 
 export function WorkplaceInspectionsPage() {
   const t = useTranslations('handbook.structure');
@@ -29,10 +31,8 @@ export function WorkplaceInspectionsPage() {
 
   return (
     <div className="flex flex-1 flex-col gap-6">
-      {/* Header */}
-      <div>
-        <h1 className="text-3xl font-bold">{moduleTitle}</h1>
-      </div>
+      {/* VCA Navigation */}
+      <VCANavigation />
 
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
         {/* Main Content */}
@@ -155,38 +155,86 @@ export function WorkplaceInspectionsPage() {
         {/* Right Sidebar */}
         <div className="space-y-4">
           <Card>
-            <CardContent className="p-4">
-              <div className="flex flex-col items-center gap-2 cursor-pointer hover:bg-accent p-4 rounded-lg transition-colors">
-                <BarChart3 className="h-8 w-8 text-primary" />
-                <span className="text-sm font-medium text-center">RAPPORTEN</span>
-              </div>
+            <CardContent className="p-0">
+              <Link 
+                href="/dashboard/vca/modules/workplace-inspections/reports"
+                className="block p-4 rounded-lg transition-colors hover:bg-accent text-center"
+                style={{
+                  backgroundImage: 'url(/images/modules/reports.png)',
+                  backgroundSize: '64px 64px',
+                  backgroundRepeat: 'no-repeat',
+                  backgroundPosition: 'center top 1rem',
+                  paddingTop: '5rem',
+                  paddingBottom: '1rem',
+                  minHeight: '120px',
+                  display: 'block'
+                }}
+              >
+                <span className="text-sm font-medium">RAPPORTEN</span>
+              </Link>
             </CardContent>
           </Card>
 
           <Card>
-            <CardContent className="p-4">
-              <div className="flex flex-col items-center gap-2 cursor-pointer hover:bg-accent p-4 rounded-lg transition-colors">
-                <ClipboardList className="h-8 w-8 text-primary" />
-                <span className="text-sm font-medium text-center">CHECKLIST TEMPLATES</span>
-              </div>
+            <CardContent className="p-0">
+              <Link 
+                href="/dashboard/vca/modules/workplace-inspections/templates"
+                className="block p-4 rounded-lg transition-colors hover:bg-accent text-center"
+                style={{
+                  backgroundImage: 'url(/images/modules/checklist.png)',
+                  backgroundSize: '64px 64px',
+                  backgroundRepeat: 'no-repeat',
+                  backgroundPosition: 'center top 1rem',
+                  paddingTop: '5rem',
+                  paddingBottom: '1rem',
+                  minHeight: '120px',
+                  display: 'block'
+                }}
+              >
+                <span className="text-sm font-medium">CHECKLIST TEMPLATES</span>
+              </Link>
             </CardContent>
           </Card>
 
           <Card>
-            <CardContent className="p-4">
-              <div className="flex flex-col items-center gap-2 cursor-pointer hover:bg-accent p-4 rounded-lg transition-colors">
-                <Calendar className="h-8 w-8 text-primary" />
-                <span className="text-sm font-medium text-center">WERKPLEKINSPECTIE PLANNER</span>
-              </div>
+            <CardContent className="p-0">
+              <Link 
+                href="/dashboard/vca/modules/workplace-inspections/scheduler"
+                className="block p-4 rounded-lg transition-colors hover:bg-accent text-center"
+                style={{
+                  backgroundImage: 'url(/images/modules/calendar.png)',
+                  backgroundSize: '64px 64px',
+                  backgroundRepeat: 'no-repeat',
+                  backgroundPosition: 'center top 1rem',
+                  paddingTop: '5rem',
+                  paddingBottom: '1rem',
+                  minHeight: '120px',
+                  display: 'block'
+                }}
+              >
+                <span className="text-sm font-medium">WERKPLEKINSPECTIE PLANNER</span>
+              </Link>
             </CardContent>
           </Card>
 
           <Card>
-            <CardContent className="p-4">
-              <div className="flex flex-col items-center gap-2 cursor-pointer hover:bg-accent p-4 rounded-lg transition-colors">
-                <Settings className="h-8 w-8 text-primary" />
-                <span className="text-sm font-medium text-center">INSTELLINGEN</span>
-              </div>
+            <CardContent className="p-0">
+              <Link 
+                href="/dashboard/vca/modules/workplace-inspections/settings"
+                className="block p-4 rounded-lg transition-colors hover:bg-accent text-center"
+                style={{
+                  backgroundImage: 'url(/images/modules/settings.png)',
+                  backgroundSize: '64px 64px',
+                  backgroundRepeat: 'no-repeat',
+                  backgroundPosition: 'center top 1rem',
+                  paddingTop: '5rem',
+                  paddingBottom: '1rem',
+                  minHeight: '120px',
+                  display: 'block'
+                }}
+              >
+                <span className="text-sm font-medium">INSTELLINGEN</span>
+              </Link>
             </CardContent>
           </Card>
         </div>

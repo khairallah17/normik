@@ -16,6 +16,7 @@ import {
   SidebarTrigger,
 } from "@/components/ui/sidebar"
 import { LanguageSwitcher } from "@/components/language-switcher"
+import { VCAHeader } from "@/components/vca-header"
 import { useTranslations } from 'next-intl'
 import { usePathname } from "@/i18n/routing"
 
@@ -24,7 +25,14 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
 
   // Check if we're on the main dashboard page (hide sidebar)
-  const isMainDashboard = pathname === '/dashboard';
+  const isMainDashboard = pathname === '/dashboard' || pathname?.endsWith('/dashboard');
+  
+  // Check if we're on a VCA page (hide sidebar - navigation is in header)
+  // Account for locale prefix (e.g., /nl/dashboard/vca or /en/dashboard/vca)
+  // Also check for VCA modules pages
+  const isVCAPage = pathname?.includes('/dashboard/vca') || 
+                    pathname?.includes('/vca') || 
+                    pathname?.includes('vca/modules');
 
   if (isMainDashboard) {
     return (
@@ -38,6 +46,17 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           </div>
         </header>
         <main className="container max-w-7xl mx-auto px-6 py-8">
+          {children}
+        </main>
+      </div>
+    );
+  }
+
+  if (isVCAPage) {
+    return (
+      <div className="min-h-screen bg-background">
+        <VCAHeader />
+        <main className="container max-w-7xl mx-auto px-6 py-8" style={{ paddingTop: '72px' }}>
           {children}
         </main>
       </div>

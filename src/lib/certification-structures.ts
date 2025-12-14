@@ -247,6 +247,14 @@ export const hkzVvtStructure: TreeNode[] = [
 // VCA Structure
 export const vcaStructure: TreeNode[] = [
   {
+    id: "1-8-0",
+    titleKey: "general",
+    url: "/dashboard/vca/general",
+    children: [
+      { id: "1-8-0-1", titleKey: "laws_regulations", url: "/dashboard/vca/general/laws-regulations" },
+    ],
+  },
+  {
     id: "1-8-1",
     titleKey: "policy",
     url: "/dashboard/vca/policy",
@@ -260,8 +268,8 @@ export const vcaStructure: TreeNode[] = [
         titleKey: "job_description_vgm_officer",
         url: "/dashboard/vca/policy/job-description-vgm-officer",
         children: [
-          { id: "1-8-1-5-1", titleKey: "qualification_vgm_officer", url: "/dashboard/vca/policy/qualification-vgm-officer" },
-          { id: "1-8-1-5-2", titleKey: "qualification_external_vgm_expert", url: "/dashboard/vca/policy/qualification-external-vgm-expert" },
+          { id: "1-8-1-5-1", titleKey: "qualification_vgm_officer", url: "/dashboard/vca/policy/job-description-vgm-officer/qualification-vgm-officer" },
+          { id: "1-8-1-5-2", titleKey: "qualification_external_vgm_expert", url: "/dashboard/vca/policy/job-description-vgm-officer/qualification-external-vgm-expert" },
         ],
       },
       { id: "1-8-1-6", titleKey: "personnel_assessments", url: "/dashboard/vca/policy/personnel-assessments" },
@@ -300,9 +308,9 @@ export const vcaStructure: TreeNode[] = [
         titleKey: "improvement_program_ohs_awareness",
         url: "/dashboard/vca/ohs-awareness/improvement-program-ohs-awareness",
         children: [
-          { id: "1-8-4-1-1", titleKey: "assessment_list_ohs_behavior", url: "/dashboard/vca/ohs-awareness/assessment-list-ohs-behavior" },
-          { id: "1-8-4-1-2", titleKey: "toolbox_meeting_behavior_improvement", url: "/dashboard/vca/ohs-awareness/toolbox-meeting-behavior-improvement" },
-          { id: "1-8-4-1-3", titleKey: "toolbox_meeting_safety_together", url: "/dashboard/vca/ohs-awareness/toolbox-meeting-safety-together" },
+          { id: "1-8-4-1-1", titleKey: "assessment_list_ohs_behavior", url: "/dashboard/vca/ohs-awareness/improvement-program-ohs-awareness/assessment-list-ohs-behavior" },
+          { id: "1-8-4-1-2", titleKey: "toolbox_meeting_behavior_improvement", url: "/dashboard/vca/ohs-awareness/improvement-program-ohs-awareness/toolbox-meeting-behavior-improvement" },
+          { id: "1-8-4-1-3", titleKey: "toolbox_meeting_safety_together", url: "/dashboard/vca/ohs-awareness/improvement-program-ohs-awareness/toolbox-meeting-safety-together" },
         ],
       },
       { id: "1-8-4-2", titleKey: "list_dates_topics_presentation", url: "/dashboard/vca/ohs-awareness/list-dates-topics-presentation" },

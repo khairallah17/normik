@@ -244,8 +244,8 @@ export default function HandbookSectionPage({ params }: PageProps) {
         { id: '9', titleKey: 'management_reviews', url: '/dashboard/handbook/vca/policy/management-reviews' },
       ],
       '/dashboard/handbook/vca/policy/job-description-vgm-officer': [
-        { id: '1', titleKey: 'qualification_vgm_officer', url: '/dashboard/handbook/vca/policy/qualification-vgm-officer' },
-        { id: '2', titleKey: 'qualification_external_vgm_expert', url: '/dashboard/handbook/vca/policy/qualification-external-vgm-expert' },
+        { id: '1', titleKey: 'qualification_vgm_officer', url: '/dashboard/handbook/vca/policy/job-description-vgm-officer/qualification-vgm-officer' },
+        { id: '2', titleKey: 'qualification_external_vgm_expert', url: '/dashboard/handbook/vca/policy/job-description-vgm-officer/qualification-external-vgm-expert' },
       ],
       '/dashboard/handbook/vca/risks': [
         { id: '1', titleKey: 'frm_tra', url: '/dashboard/handbook/vca/risks/frm-tra' },
@@ -266,9 +266,9 @@ export default function HandbookSectionPage({ params }: PageProps) {
         { id: '2', titleKey: 'list_dates_topics_presentation', url: '/dashboard/handbook/vca/ohs-awareness/list-dates-topics-presentation' },
       ],
       '/dashboard/handbook/vca/ohs-awareness/improvement-program-ohs-awareness': [
-        { id: '1', titleKey: 'assessment_list_ohs_behavior', url: '/dashboard/handbook/vca/ohs-awareness/assessment-list-ohs-behavior' },
-        { id: '2', titleKey: 'toolbox_meeting_behavior_improvement', url: '/dashboard/handbook/vca/ohs-awareness/toolbox-meeting-behavior-improvement' },
-        { id: '3', titleKey: 'toolbox_meeting_safety_together', url: '/dashboard/handbook/vca/ohs-awareness/toolbox-meeting-safety-together' },
+        { id: '1', titleKey: 'assessment_list_ohs_behavior', url: '/dashboard/handbook/vca/ohs-awareness/improvement-program-ohs-awareness/assessment-list-ohs-behavior' },
+        { id: '2', titleKey: 'toolbox_meeting_behavior_improvement', url: '/dashboard/handbook/vca/ohs-awareness/improvement-program-ohs-awareness/toolbox-meeting-behavior-improvement' },
+        { id: '3', titleKey: 'toolbox_meeting_safety_together', url: '/dashboard/handbook/vca/ohs-awareness/improvement-program-ohs-awareness/toolbox-meeting-safety-together' },
       ],
       '/dashboard/handbook/vca/emergency-situations': [
         { id: '1', titleKey: 'alarm_card', url: '/dashboard/handbook/vca/emergency-situations/alarm-card' },
@@ -479,15 +479,15 @@ export default function HandbookSectionPage({ params }: PageProps) {
         'Beoordeling lijst VGM-gedrag en -bewustzijn wordt gebruikt.',
         'Toolboxmeetings worden gehouden over gedrag en veiligheid.',
       ],
-      '/dashboard/handbook/vca/ohs-awareness/assessment-list-ohs-behavior': [
+      '/dashboard/handbook/vca/ohs-awareness/improvement-program-ohs-awareness/assessment-list-ohs-behavior': [
         'Beoordeling lijst is beschikbaar voor het beoordelen van VGM-gedrag.',
         'Beoordelingen worden regelmatig uitgevoerd.',
       ],
-      '/dashboard/handbook/vca/ohs-awareness/toolbox-meeting-behavior-improvement': [
+      '/dashboard/handbook/vca/ohs-awareness/improvement-program-ohs-awareness/toolbox-meeting-behavior-improvement': [
         'Toolboxmeetings over gedrag verbetering worden gehouden.',
         'Onderwerpen worden gedocumenteerd.',
       ],
-      '/dashboard/handbook/vca/ohs-awareness/toolbox-meeting-safety-together': [
+      '/dashboard/handbook/vca/ohs-awareness/improvement-program-ohs-awareness/toolbox-meeting-safety-together': [
         'Toolboxmeetings "Samen zorgen voor veiligheid" worden gehouden.',
         'Onderwerpen worden gedocumenteerd.',
       ],

@@ -7,6 +7,7 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { useTranslations } from 'next-intl'
 import { Search, ChevronLeft, ChevronRight, ChevronsLeft, ChevronsRight } from "lucide-react"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+import { VCANavigation } from "@/components/vca-navigation"
 
 export function WorkPlansPage() {
   const t = useTranslations('handbook.structure');
@@ -27,11 +28,9 @@ export function WorkPlansPage() {
 
   return (
     <div className="flex flex-1 flex-col gap-6">
-      {/* Header */}
-      <div>
-        <h1 className="text-3xl font-bold">{moduleTitle}</h1>
-      </div>
-
+      {/* VCA Navigation */}
+      <VCANavigation />
+      
       {/* Main Content Card */}
       <Card>
         <CardHeader>

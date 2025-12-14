@@ -153,6 +153,9 @@
       "iso_45001_description": "ISO 45001 Arbomanagementsysteem",
       "vca": "VCA - Veiligheid, Gezondheid & Milieu",
       "vca_description": "VCA Managementsysteem",
+      "general": "Algemeen",
+      "general_description": "Algemene informatie en relevante wet- en regelgeving",
+      "laws_regulations": "Relevante wet- en regelgeving",
       "policy": "Beleid",
       "vca_certificate": "VCA Certificaat",
       "policy_statement": "Beleidsverklaring veiligheid, gezondheid en milieu",
@@ -473,6 +476,18 @@
         "Toezien op de naleving van het managementsysteem en zo nodig ingrijpen om bij te sturen.",
         "Behandelen ongevallen en tekortkomingen: onderzoek/ oorzaakanalyse, corrigerende maatregelen, implementatie, registratie."
       ],
+      "policy_qualification_vgm_officer": [
+        "De VGM-functionaris beschikt over de benodigde kwalificaties en competenties.",
+        "Diploma's, attesten en getuigschriften van de VGM-functionaris zijn beschikbaar en actueel.",
+        "De VGM-functionaris volgt regelmatig bijscholing om kennis en vaardigheden up-to-date te houden.",
+        "Kwalificaties worden gedocumenteerd en bewaard in het personeelsdossier."
+      ],
+      "policy_qualification_external_vgm_expert": [
+        "Externe VGM-deskundigen worden ingezet wanneer aanvullende expertise nodig is.",
+        "Externe VGM-deskundigen beschikken over de benodigde kwalificaties en certificeringen.",
+        "Kwalificaties van externe VGM-deskundigen worden geverifieerd en gedocumenteerd.",
+        "Contracten en overeenkomsten met externe VGM-deskundigen zijn beschikbaar."
+      ],
       "policy_personnel_assessments": [
         "De directeur beoordeelt alle leidinggevenden jaarlijks aan de hand van het beoordelingsformulier.",
         "Deze beoordeling is gebaseerd op de functieomschrijving. VGM is een nadrukkelijk onderwerp van gesprek.",
@@ -513,6 +528,97 @@
         "Correctieve maatregelen worden genomen en gevolgd.",
         "Lessen worden geleerd en gedeeld binnen de organisatie."
       ]
+    }
+  },
+  "vca_content": {
+    "general": {
+      "title": "Algemeen",
+      "description": "Algemene informatie en relevante wet- en regelgeving voor VCA-naleving."
+    },
+    "policy": {
+      "title": "1. Beleid",
+      "description": "Het VCA-beleid omvat beleidsverklaringen, organisatiestructuur, functieomschrijvingen, beoordelingen en directiebeoordelingen.",
+      "policy_statement": {
+        "title": "Beleidsverklaring (VCA 1.1)",
+        "content": "De directie heeft het VGM-beleid vastgelegd en bekrachtigd (d.m.v. ondertekening) in een beleidsverklaring. Deze verklaring wordt driejaarlijks geëvalueerd en zo nodig geactualiseerd.\n\nDe beleidsverklaring wordt binnen het gehele bedrijf gecommuniceerd d.m.v. het introductie-/ voorlichting programma (nieuwe) eigen en tijdelijke medewerkers. Ook wordt het beleid gecommuniceerd met medewerkers.",
+        "references": ["Beleidsverklaring"]
+      },
+      "ohs_officer": {
+        "title": "VGM-functionaris (VCA 1.2)",
+        "content": "Binnen het bedrijf is een VGM-functionaris aangesteld (zie organogram en aanstellingsbrief), die verantwoordelijk is voor het coördineren van de VGM-aspecten binnen het bedrijf bij de dagelijkse gang van zaken.\n\nDe VGM-functionaris rapporteert rechtstreeks aan de directie. De taken, verantwoordelijkheden, bevoegdheden en eisen zijn verder uitgewerkt in een functieomschrijving.",
+        "references": ["Organogram", "Functieomschrijving VGM-functionaris", "Diploma's, attesten, getuigschriften VGM-functionaris", "Aanstellingsbrief VGM functionaris"]
+      },
+      "ohs_structure": {
+        "title": "VGM-structuur (VCA 1.3)",
+        "content": "De VGM-structuur is schematisch weergegeven in het organogram.\n\nVoor alle leidinggevende functies en voor de VGM-functionaris zijn functieomschrijvingen beschikbaar, waarin de taken, verantwoordelijkheden en bevoegdheden duidelijk zijn beschreven.",
+        "references": ["Organogram", "Functieomschrijving directeur", "Functieomschrijving uitvoerder", "Functieomschrijving VGM-functionaris"]
+      },
+      "management_assessment": {
+        "title": "Beoordeling leidinggevenden (VCA 1.4)",
+        "content": "De directeur beoordeelt alle leidinggevenden jaarlijks aan de hand van het beoordelingsformulier. Deze beoordeling is gebaseerd op de functieomschrijving. VGM is een nadrukkelijk onderwerp van gesprek.\n\nVan de beoordeling wordt een verslag gemaakt in het beoordelingsformulier. Eventuele acties worden met verantwoordelijke en planning opgenomen in het verslag.",
+        "references": ["Beoordelingsformulier"]
+      },
+      "internal_audit": {
+        "title": "Interne audit (VCA 1.5)",
+        "content": "Een interne audit is een interne beoordeling op het voldoen aan gestelde normen of eisen. De VGM-functionaris voert de interne audits jaarlijks uit volgens een vaste planning in het jaarplan. Hij wordt hierbij ondersteund door het formulier interne audit.\n\nEvenwichtig verdeeld over een periode van drie jaar worden alle van toepassing zijnde vragen uit de VCA-checklist beoordeeld. De resultaten van deze interne audits worden vastgelegd in een rapportage."
+      },
+      "management_review": {
+        "title": "Directiebeoordeling (VCA 1.6)",
+        "content": "Jaarlijks beoordeelt de directie of het VCA**-systeem en de organisatie voldoen aan de VCA*-eisen. Als input voor deze beoordeling worden onder andere de volgende gegevens gebruikt:\n\n- Resultaten en effectiviteit van de voorgaande directiebeoordeling.\n- Rapportage en actieplan interne audit(s) (acties, termijnen, verantwoordelijken, vaststelling en evaluatie actiepunten voorgaande interne audit).\n- Rapportage externe audit(s).\n- Ongevallen met werkverlet, ongevallen met aangepast werk, ongevallen zonder verzuim/werkverlet (vanaf EHBO), bijna-ongevallen, onveilige situaties en handelingen en overige VGM-incidenten.\n- Doelstellingen en acties m.b.t. IF.\n- Risico Inventarisatie en Evaluatie (RIE), Milieu-RIE en Plan van Aanpak n.a.v. RIE (PvA).\n- Taak Risico Analyse (TRA's).\n- VGM-inspecties en actiepunten.\n- VGM-verantwoorde materialen, middelen en PBM.\n- Melding en onderzoek van ongevallen en incidenten.\n\nDe output van de beoordeling wordt vastgelegd in document directiebeoordeling/jaarplan, waarin concrete verbeteracties worden vastgesteld. De directie verzorgt de opvolging van het KAM-jaarplan inclusief de acties.",
+        "references": ["Intern auditverslag", "Directiebeoordeling/jaarplan"]
+      }
+    },
+    "risks": {
+      "title": "2. Risico's",
+      "description": "VGM-risico-inventarisatie en -evaluatie (RIE), taakrisicoanalyse (TRA), en laatste minuut risico analyse (LMRA).",
+      "rie": {
+        "title": "VGM-risico-inventarisatie en -evaluatie (RIE) (VCA 2.1)",
+        "content": "De VGM-functionaris heeft, conform wettelijke voorschriften, in samenwerking met de externe veiligheidskundige een RIE opgesteld. In deze RIE is expliciet aandacht besteed aan de inventarisatie van de operationele activiteiten, de daaraan verbonden gevaren en de risicobeoordeling.\n\nIn het plan van aanpak zijn van doeltreffende maatregelen ten aanzien van de risico's vastgesteld, waarbij bronaanpak de voorkeur verdient. Hierbij zijn de actiepunten, verantwoordelijken voor uitvoering en termijnen vastgelegd.\n\nDe RIE en het PvA worden periodiek (minimaal driejaarlijks) geëvalueerd (en indien nodig aangepast) op basis van:\n- meldingen van ongevallen en incidenten;\n- resultaten van werkplekinspecties;\n- resultaten van TRA's;\n- wijzigingen in wetgeving;\n- wijzigingen in de werkomgeving en werkzaamheden;\n- voortschrijdende techniek."
+      },
+      "tra": {
+        "title": "Taakrisicoanalyse (TRA) (VCA 2.2)",
+        "content": "Uit de werkzaamheden kunnen risico's voorkomen, die niet zijn opgenomen in de RIE (bijvoorbeeld door een specifieke werkomgeving of wanneer wordt afgeweken van een gangbare werkmethode). Voor elk werk wordt een TRA opgesteld.\n\nIndien dit niet het geval is, dan stelt de bij de uitvoering van het werk betrokken lijnfunctionaris, eventueel ondersteund door een veiligheidskundige, een TRA op. De betrokken lijnfunctionaris heeft de bevoegdheid om de werkzaamheden stil te leggen indien de risico's te groot zijn.\n\nIn deze TRA wordt aandacht besteed aan:\n- De uit te voeren taken;\n- De daaraan verbonden risico's;\n- De te treffen maatregelen, waarbij bronaanpak de voorkeur verdient;\n- De communicatie van de TRA met alle uitvoerenden en betrokkenen door de opsteller van de TRA.\n\nNa ieder ongeval met verzuim wordt de TRA geëvalueerd en zo nodig aangepast."
+      },
+      "lmra": {
+        "title": "Laatste Minuut Risico Analyse (LMRA) (VCA 2.3)",
+        "content": "De LMRA is gericht op het verder beperken van de risico's bij de uitvoering van werkzaamheden door direct voor de start van de werkzaamheden nogmaals aandacht te besteden aan de risico's en maatregelen.\n\nEen instructie met betrekking tot de LMRA is opgenomen in het Veiligheid boekje.\n\nDe directie en/of operationeel leidinggevende(n) controleren de uitvoering van de LMRA tijdens de werkplekinspectie."
+      }
+    },
+    "competence": {
+      "title": "3. Bekwaamheid",
+      "description": "Introductie medewerkers, functietabel, veiligheid boekje, en communicatieplan."
+    },
+    "ohs_awareness": {
+      "title": "4. VGM-bewustzijn",
+      "description": "Verbetering programma's voor VGM-bewustzijn en gedrag, toolboxmeetings, en beoordelingslijsten."
+    },
+    "ohs_project_plan": {
+      "title": "5. VGM-projectplan",
+      "description": "VGM-projectplannen voor projecten met VGM-vereisten en maatregelen."
+    },
+    "emergency_situations": {
+      "title": "6. Noodsituaties",
+      "description": "Noodprocedures, alarmkaarten, en nooduitrusting."
+    },
+    "inspections": {
+      "title": "7. Inspecties",
+      "description": "Regelmatige inspecties, inspectieresultaten, en correctieve maatregelen."
+    },
+    "health": {
+      "title": "8. Gezondheid",
+      "description": "Gezondheidsprogramma's, gezondheidsmonitoring, en kundigheid medisch deskundige."
+    },
+    "resources": {
+      "title": "9. Middelen",
+      "description": "VGM specificatie arbeid middelen en overzicht beheer arbeid middelen."
+    },
+    "procurement_services": {
+      "title": "10. Inkoop van diensten",
+      "description": "Inkoopprocedures voor diensten, VCA-gecertificeerde onderaannemers, en leveranciersbeheer."
+    },
+    "ohs_incidents": {
+      "title": "11. VGM-incidenten",
+      "description": "Registratie, onderzoek, en correctieve maatregelen voor VGM-incidenten."
     }
   },
   "settings": {

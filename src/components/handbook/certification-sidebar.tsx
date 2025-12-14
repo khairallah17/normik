@@ -37,6 +37,29 @@ function TreeItem({ item, level = 0, basePath }: TreeItemProps) {
   const t = useTranslations('handbook.structure');
   const pathname = usePathname();
   
+  // Check if this is VCA certification
+  const isVCA = basePath.includes('/vca');
+  
+  // Get section number for VCA (matching KAM-systeem.nl numbering)
+  const getVCASectionNumber = (titleKey: string): number | null => {
+    if (!isVCA) return null;
+    const vcaNumberMap: Record<string, number> = {
+      'general': 0,
+      'policy': 1,
+      'risks': 2,
+      'competence': 3,
+      'ohs_awareness': 4,
+      'ohs_project_plan': 5,
+      'emergency_situations': 6,
+      'inspections': 7,
+      'health': 8,
+      'resources': 9,
+      'procurement_services': 10,
+      'ohs_incidents': 11,
+    };
+    return vcaNumberMap[titleKey] ?? null;
+  };
+  
   // Update URL to use new base path
   const itemUrl = item.url.replace('/dashboard/handbook', basePath);
   
@@ -63,6 +86,7 @@ function TreeItem({ item, level = 0, basePath }: TreeItemProps) {
   
   const title = t(item.titleKey);
   const description = item.descriptionKey ? t(item.descriptionKey) : undefined;
+  const sectionNumber = getVCASectionNumber(item.titleKey);
   
   const content = (
     <>
@@ -85,14 +109,19 @@ function TreeItem({ item, level = 0, basePath }: TreeItemProps) {
       )}
       {hasChildren ? (
         isExpanded ? (
-          <FolderOpen className="h-4 w-4 text-blue-500" />
+          <FolderOpen className={cn("h-4 w-4", isVCA ? (isActive ? "text-white" : "text-[#0066CC]") : "text-blue-500")} />
         ) : (
-          <Folder className="h-4 w-4 text-blue-500" />
+          <Folder className={cn("h-4 w-4", isVCA ? (isActive ? "text-white" : "text-[#0066CC]") : "text-blue-500")} />
         )
       ) : (
-        <FileText className="h-4 w-4 text-gray-500" />
+        <FileText className={cn("h-4 w-4", isVCA ? (isActive ? "text-white" : "text-gray-500") : "text-gray-500")} />
       )}
-      <span className="flex-1 text-sm">{title}</span>
+      <span className="flex-1 text-sm">
+        {isVCA && sectionNumber !== null && sectionNumber > 0 && (
+          <span className="font-semibold text-[#0066CC] mr-1">{sectionNumber}.</span>
+        )}
+        {title}
+      </span>
     </>
   );
 
@@ -101,8 +130,14 @@ function TreeItem({ item, level = 0, basePath }: TreeItemProps) {
       <Link
         href={itemUrl}
         className={cn(
-          "flex items-center gap-2 py-2 px-2 rounded-md hover:bg-accent cursor-pointer transition-colors",
-          isActive && "bg-accent"
+          "flex items-center gap-2 py-2 px-2 rounded-md cursor-pointer transition-colors",
+          isVCA 
+            ? (isActive 
+                ? "bg-[#0066CC] text-white hover:bg-[#004499]" 
+                : "hover:bg-[#E6F2FF] text-[#003366]")
+            : (isActive 
+                ? "bg-accent" 
+                : "hover:bg-accent")
         )}
         style={{ marginLeft: `${level * 16}px` }}
       >
