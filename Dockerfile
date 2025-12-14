@@ -33,6 +33,7 @@ WORKDIR /app
 
 ENV NODE_ENV=production
 ENV NEXT_TELEMETRY_DISABLED=1
+ENV PORT=8090
 
 # Create non-root user
 RUN addgroup --system --gid 1001 nodejs
@@ -55,11 +56,11 @@ COPY --from=builder --chown=nextjs:nodejs /app/node_modules/@prisma ./node_modul
 USER nextjs
 
 # Expose port
-EXPOSE 3000
+EXPOSE 8090
 
 # Health check
 HEALTHCHECK --interval=30s --timeout=10s --start-period=40s --retries=3 \
-  CMD node -e "require('http').get('http://localhost:3000/api/hello', (r) => {process.exit(r.statusCode === 200 ? 0 : 1)})"
+  CMD node -e "require('http').get('http://localhost:8090/api/hello', (r) => {process.exit(r.statusCode === 200 ? 0 : 1)})"
 
 # Start Next.js server
 CMD ["node", "server.js"]

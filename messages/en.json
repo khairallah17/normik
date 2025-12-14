@@ -283,6 +283,238 @@
       "instruction_4": "Supported formats: PDF, DOCX, DOC, XLSX, XLS"
     }
   },
+  "requirements": {
+    "vca": {
+      "policy": [
+        "VCA policy is established and documented.",
+        "The policy is communicated to all employees.",
+        "The policy is regularly evaluated and updated.",
+        "",
+        "The VCA policy includes the following components:",
+        "- Policy Statement (VCA 1.1): Management has established and confirmed the OHS policy in a policy statement. This statement is evaluated every three years and updated as necessary.",
+        "- OHS Officer (VCA 1.2): An OHS officer is appointed within the company, responsible for coordinating OHS aspects in daily operations.",
+        "- OHS Structure (VCA 1.3): The OHS structure is schematically shown in the organization chart. Job descriptions are available for all management positions and the OHS officer.",
+        "- Management Assessment (VCA 1.4): The director assesses all managers annually using the assessment form. OHS is an explicit topic of discussion.",
+        "- Internal Audit (VCA 1.5): The OHS officer performs internal audits annually according to a fixed schedule in the annual plan. All applicable questions from the VCA checklist are assessed evenly distributed over a three-year period.",
+        "- Management Review (VCA 1.6): Annually, management assesses whether the VCA** system and organization meet VCA* requirements. The output is recorded in the management review/annual plan document."
+      ],
+      "risks": [
+        "OHS risk inventory and evaluation (RIE) is prepared in accordance with legal requirements.",
+        "The RIE explicitly addresses the inventory of operational activities, associated hazards, and risk assessment.",
+        "The action plan establishes effective measures for risks, with source control preferred.",
+        "The RIE and action plan are periodically (at least every three years) evaluated and adjusted if necessary.",
+        "A Task Risk Analysis (TRA) is prepared for each job if necessary.",
+        "Last Minute Risk Analysis (LMRA) is performed before starting work."
+      ],
+      "risks_frm_tra": [
+        "TRA form is available for preparing task risk analyses.",
+        "Completed TRA's are documented and stored."
+      ],
+      "risks_risk_inventory_evaluation": [
+        "RIE is prepared in cooperation with the external safety expert.",
+        "Action plan (PvA) is prepared with action items, responsible parties, and deadlines.",
+        "Overview of risks and measures is available.",
+        "Action list is maintained and evaluated."
+      ],
+      "competence": [
+        "Competency requirements are established for all positions.",
+        "Employees receive appropriate introduction and training.",
+        "Function table is available with required competencies.",
+        "Safety booklet is available for all employees.",
+        "Communication plan is established and implemented."
+      ],
+      "competence_frm_employee_introduction": [
+        "Introduction program for new employees is available.",
+        "Introduction is carried out according to established program."
+      ],
+      "competence_function_table": [
+        "Function table contains all functions with corresponding competency requirements.",
+        "Function table is regularly evaluated and updated."
+      ],
+      "competence_safety_booklet": [
+        "Safety booklet is available for all employees.",
+        "Safety booklet contains instructions for safe work.",
+        "LMRA instruction is included in the safety booklet."
+      ],
+      "competence_communication_plan": [
+        "Communication plan is established for OHS communication.",
+        "Communication plan is implemented and evaluated."
+      ],
+      "ohs_awareness": [
+        "OHS awareness is promoted within the organization.",
+        "Improvement program for OHS awareness and behavior is implemented.",
+        "Toolbox meetings are held regularly.",
+        "List with dates, topics discussed, and attendance is maintained."
+      ],
+      "ohs_awareness_improvement_program": [
+        "Improvement program is established and implemented.",
+        "Assessment list for OHS behavior and awareness is used.",
+        "Toolbox meetings are held about behavior and safety."
+      ],
+      "ohs_awareness_assessment_list": [
+        "Assessment list is available for assessing OHS behavior.",
+        "Assessments are performed regularly."
+      ],
+      "ohs_awareness_toolbox_behavior": [
+        "Toolbox meetings about behavior improvement are held.",
+        "Topics are documented."
+      ],
+      "ohs_awareness_toolbox_safety": [
+        "Toolbox meetings \"Working together for safety\" are held.",
+        "Topics are documented."
+      ],
+      "ohs_awareness_list_dates": [
+        "List with dates, topics discussed, and attendance is maintained.",
+        "List is regularly evaluated."
+      ],
+      "ohs_project_plan": [
+        "OHS project plan is established for projects.",
+        "Project plan contains OHS requirements and measures.",
+        "Project plan is evaluated and updated."
+      ],
+      "emergency_situations": [
+        "Emergency procedures are established and documented.",
+        "Alarm card is available at all workplaces.",
+        "Emergency drills are performed regularly.",
+        "Emergency equipment is available and checked."
+      ],
+      "emergency_situations_alarm_card": [
+        "Alarm card is available at all workplaces.",
+        "Alarm card contains emergency numbers and procedures.",
+        "Alarm card is regularly checked and updated."
+      ],
+      "inspections": [
+        "Inspections are performed regularly.",
+        "Inspection results are documented.",
+        "Corrective measures are taken where necessary.",
+        "Inspections are evaluated and followed up."
+      ],
+      "inspections_test": [
+        "Test inspections are performed according to schedule.",
+        "Test results are documented."
+      ],
+      "health": [
+        "Health programs are implemented.",
+        "Health monitoring is performed.",
+        "Proof of medical expert competence or agreement with occupational health service is available.",
+        "Health risks are managed."
+      ],
+      "health_proof_medical": [
+        "Proof of medical expert competence is available.",
+        "Agreement with occupational health service is available if applicable.",
+        "Documents are regularly checked and updated."
+      ],
+      "resources": [
+        "Sufficient resources are available for VCA.",
+        "OHS specification for work resources is available.",
+        "Overview of work resource management is maintained.",
+        "Resources are effectively managed and evaluated."
+      ],
+      "resources_ohs_specification": [
+        "OHS specification for work resources is established.",
+        "Specification is used for procurement and management."
+      ],
+      "resources_overview_management": [
+        "Overview of work resource management is maintained.",
+        "Overview is regularly evaluated and updated."
+      ],
+      "procurement_services": [
+        "Procurement procedures for services are established.",
+        "Within the company, we preferably work with VCA-certified subcontractors.",
+        "If a subcontractor is not certified, it is assessed whether they meet the requirements of annex A.",
+        "The assessment takes place annually.",
+        "Copies of certificates and/or assessments are archived in the supplier file.",
+        "Regularly used subcontractors are included in the supplier file.",
+        "At least annually, the OHS performance of regularly used subcontractors is assessed.",
+        "Within the company, no temporary workers are employed."
+      ],
+      "policy_vca_certificate": [
+        "VCA certificate is available and valid.",
+        "Certificate is regularly renewed.",
+        "Certificate is accessible to all employees."
+      ],
+      "policy_policy_statement": [
+        "Management has established and confirmed (by signature) the OHS policy in a policy statement.",
+        "This statement is evaluated every three years and updated as necessary.",
+        "The policy statement is communicated throughout the company through the introduction/information program for (new) own and temporary employees.",
+        "The policy is also communicated to employees."
+      ],
+      "policy_job_description_director": [
+        "As director, ultimately responsible for the entire company. Accountable to shareholders.",
+        "Is ultimately responsible and ensures the execution of: business policy, OHS policy, personnel policy.",
+        "Ensures continuity of the company.",
+        "Maintains contacts with clients, subcontractors, and other stakeholders.",
+        "Performs periodic (at least 4 times per year) workplace inspections.",
+        "Organizes meetings (including toolbox meetings).",
+        "Supervises employees.",
+        "Executes daily personnel, OHS, and training policy.",
+        "Handles complaints, deficiencies, accidents, and incidents and reports."
+      ],
+      "policy_job_description_executor": [
+        "As operational manager, accountable to the director.",
+        "Daily execution of the project and associated OHS assurance.",
+        "Ensures efficient work sequence and planning.",
+        "Material and equipment management at the work location.",
+        "Enforcement and coordination of rules regarding safety, health, and environment at the workplace (OHS project coordinator).",
+        "Maintaining contacts on behalf of the company with: supervisors from/on behalf of clients, neighbors, in some cases with clients, if necessary together with the executor, other involved parties.",
+        "Training of new employees.",
+        "Stopping work in case of imminent danger to safety, health, or environment.",
+        "Giving instructions and assignments to employees."
+      ],
+      "policy_job_description_vgm_officer": [
+        "The OHS officer is accountable to the board. He has no management tasks.",
+        "The OHS officer also fulfills the role of prevention officer within the company.",
+        "The OHS officer is co-responsible for coordinating OHS aspects within the company in daily operations and ensuring the input of expertise.",
+        "He ensures, among other things, the introduction and maintenance of the management system in accordance with legal and normative requirements.",
+        "Establishing and maintaining the management system.",
+        "Performing internal audits.",
+        "Supporting the execution of risk inventory and evaluation and task risk analyses.",
+        "Processing OHS registrations, reporting findings to management.",
+        "Monitoring compliance with the management system and intervening if necessary to adjust.",
+        "Handling accidents and deficiencies: investigation/cause analysis, corrective measures, implementation, registration."
+      ],
+      "policy_personnel_assessments": [
+        "The director assesses all managers annually using the assessment form.",
+        "This assessment is based on the job description. OHS is an explicit topic of discussion.",
+        "A report is made of the assessment in the assessment form.",
+        "Any actions are included in the report with responsible party and planning."
+      ],
+      "policy_internal_audit_reports": [
+        "An internal audit is an internal assessment of compliance with established standards or requirements.",
+        "The OHS officer performs internal audits annually according to a fixed schedule in the annual plan.",
+        "He is supported by the internal audit form.",
+        "Evenly distributed over a three-year period, all applicable questions from the VCA checklist are assessed.",
+        "The results of these internal audits are recorded in a report."
+      ],
+      "policy_external_audit_reports": [
+        "External audits are performed by independent auditors.",
+        "External audit reports are documented and assessed.",
+        "Action items from external audits are followed up."
+      ],
+      "policy_management_reviews": [
+        "Annually, management assesses whether the VCA** system and organization meet VCA* requirements.",
+        "As input for this assessment, the following data are used, among others:",
+        "- Results and effectiveness of the previous management review.",
+        "- Report and action plan of internal audit(s) (actions, deadlines, responsible parties, establishment and evaluation of action items from previous internal audit).",
+        "- Report of external audit(s).",
+        "- Accidents with work disability, accidents with adjusted work, accidents without absence/work disability (from first aid), near misses, unsafe situations and actions, and other OHS incidents.",
+        "- Objectives and actions regarding IF.",
+        "- Risk Inventory and Evaluation (RIE), Environmental RIE, and Action Plan following RIE (PvA).",
+        "- Task Risk Analysis (TRA's).",
+        "- OHS inspections and action items.",
+        "- OHS-responsible materials, resources, and PPE.",
+        "- Reporting and investigation of accidents and incidents.",
+        "The output of the assessment is recorded in the management review/annual plan document, in which concrete improvement actions are established.",
+        "Management ensures follow-up of the KAM annual plan including the actions."
+      ],
+      "ohs_incidents": [
+        "OHS incidents are registered and investigated.",
+        "Cause analysis is performed for all incidents.",
+        "Corrective measures are taken and followed up.",
+        "Lessons are learned and shared within the organization."
+      ]
+    }
+  },
   "settings": {
     "title": "Settings",
     "language": "Language",

@@ -30,7 +30,9 @@ interface PageProps {
 }
 
 export default function CertificationSectionPage({ params }: PageProps) {
+  const t = useTranslations('handbook');
   const tStructure = useTranslations('handbook.structure');
+  const tRequirements = useTranslations('requirements.vca');
   const pathname = usePathname();
   
   // For Next.js 15, use React.use() pattern
@@ -139,11 +141,62 @@ export default function CertificationSectionPage({ params }: PageProps) {
 
   const subsections = getSubsections();
 
-  // Get requirements (reuse from handbook page logic)
+  // Get requirements for VCA sections
   const getRequirements = (): string[] => {
-    // This will be populated from the existing requirements map
-    // For now, return empty array - we'll need to update this
-    return [];
+    if (certification !== 'vca') return [];
+    
+    const currentPath = pathname || '';
+    
+    // Map paths to translation keys
+    const pathToTranslationKey: Record<string, string> = {
+      '/dashboard/vca/policy': 'policy',
+      '/dashboard/vca/risks': 'risks',
+      '/dashboard/vca/risks/frm-tra': 'risks_frm_tra',
+      '/dashboard/vca/risks/risk-inventory-evaluation': 'risks_risk_inventory_evaluation',
+      '/dashboard/vca/competence': 'competence',
+      '/dashboard/vca/competence/frm-employee-introduction': 'competence_frm_employee_introduction',
+      '/dashboard/vca/competence/function-table': 'competence_function_table',
+      '/dashboard/vca/competence/safety-booklet': 'competence_safety_booklet',
+      '/dashboard/vca/competence/communication-plan': 'competence_communication_plan',
+      '/dashboard/vca/ohs-awareness': 'ohs_awareness',
+      '/dashboard/vca/ohs-awareness/improvement-program-ohs-awareness': 'ohs_awareness_improvement_program',
+      '/dashboard/vca/ohs-awareness/assessment-list-ohs-behavior': 'ohs_awareness_assessment_list',
+      '/dashboard/vca/ohs-awareness/toolbox-meeting-behavior-improvement': 'ohs_awareness_toolbox_behavior',
+      '/dashboard/vca/ohs-awareness/toolbox-meeting-safety-together': 'ohs_awareness_toolbox_safety',
+      '/dashboard/vca/ohs-awareness/list-dates-topics-presentation': 'ohs_awareness_list_dates',
+      '/dashboard/vca/ohs-project-plan': 'ohs_project_plan',
+      '/dashboard/vca/emergency-situations': 'emergency_situations',
+      '/dashboard/vca/emergency-situations/alarm-card': 'emergency_situations_alarm_card',
+      '/dashboard/vca/inspections': 'inspections',
+      '/dashboard/vca/inspections/inspection-test': 'inspections_test',
+      '/dashboard/vca/health': 'health',
+      '/dashboard/vca/health/proof-medical-expert-competence': 'health_proof_medical',
+      '/dashboard/vca/resources': 'resources',
+      '/dashboard/vca/resources/ohs-specification-work-resources': 'resources_ohs_specification',
+      '/dashboard/vca/resources/overview-management-work-resources': 'resources_overview_management',
+      '/dashboard/vca/procurement-services': 'procurement_services',
+      '/dashboard/vca/policy/vca-certificate': 'policy_vca_certificate',
+      '/dashboard/vca/policy/policy-statement': 'policy_policy_statement',
+      '/dashboard/vca/policy/job-description-director': 'policy_job_description_director',
+      '/dashboard/vca/policy/job-description-executor': 'policy_job_description_executor',
+      '/dashboard/vca/policy/job-description-vgm-officer': 'policy_job_description_vgm_officer',
+      '/dashboard/vca/policy/personnel-assessments': 'policy_personnel_assessments',
+      '/dashboard/vca/policy/internal-audit-reports': 'policy_internal_audit_reports',
+      '/dashboard/vca/policy/external-audit-reports': 'policy_external_audit_reports',
+      '/dashboard/vca/policy/management-reviews': 'policy_management_reviews',
+      '/dashboard/vca/ohs-incidents': 'ohs_incidents',
+    };
+    
+    const translationKey = pathToTranslationKey[currentPath];
+    if (!translationKey) return [];
+    
+    try {
+      // Get the requirements array from translations
+      const requirements = tRequirements.raw(translationKey) as string[];
+      return Array.isArray(requirements) ? requirements : [];
+    } catch {
+      return [];
+    }
   };
 
   const requirements = getRequirements();
@@ -199,7 +252,7 @@ export default function CertificationSectionPage({ params }: PageProps) {
       {subsections.length > 0 && (
         <Card>
           <CardHeader>
-            <CardTitle>Subsections</CardTitle>
+            <CardTitle>{t('subsections')}</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -230,7 +283,7 @@ export default function CertificationSectionPage({ params }: PageProps) {
       {requirements.length > 0 && (
         <Card>
           <CardHeader>
-            <CardTitle>Requirements</CardTitle>
+            <CardTitle>{t('requirements')}</CardTitle>
           </CardHeader>
           <CardContent>
             <ul className="space-y-2">
