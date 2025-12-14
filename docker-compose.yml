@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  normik-app:
+    container_name: normik-app
+    build:
+      context: ./
+      dockerfile: Dockerfile.dev
+    env_file:
+      - .env
+    volumes:
+      - ./src:/app/src
+      - ./public:/app/public
+      - /app/node_modules
+    restart: always
+    ports:
+      - 3000:3000
+    # Note: Using local PostgreSQL, not containerized
+    # Ensure DATABASE_URL points to your local PostgreSQL instance

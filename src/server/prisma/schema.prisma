@@ -1,0 +1,98 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../schemas"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  password  String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// Work Plans Module
+model WorkPlan {
+  id        String   @id @default(uuid())
+  start     DateTime
+  end       DateTime
+  title     String
+  number    String
+  location  String
+  address   String
+  type      String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// Workplace Inspections Module
+model WorkplaceInspection {
+  id         String   @id @default(uuid())
+  date       DateTime
+  title      String
+  number     String
+  type       String
+  inspector  String
+  location   String
+  deviations String?
+  direct     String?
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}
+
+// Notifications Module
+model Notification {
+  id          String   @id @default(uuid())
+  date        DateTime
+  planned     DateTime?
+  reference   String?
+  type        String
+  description String
+  by          String
+  status      String   // Open, Monitoring, Gesloten
+  owner       String?
+  location    String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+// Personnel Module
+model Personnel {
+  id            String   @id @default(uuid())
+  firstName     String
+  lastName      String
+  mobile        String?
+  function      String?
+  endOfContract String?
+  k             Int      @default(0)
+  b             String?
+  next          DateTime?
+  outOfService  Boolean  @default(false)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
+
+// Work Equipment Module
+model WorkEquipment {
+  id              String   @id @default(uuid())
+  type            String
+  description     String
+  identification  String?
+  operatingCompany String?
+  next            DateTime?
+  d               String?
+  removed         Boolean  @default(false)
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}
