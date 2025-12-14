@@ -479,5 +479,75 @@
       "completed": "Voltooid",
       "cancelled": "Geannuleerd"
     }
+  },
+  "landing": {
+    "hero": {
+      "title": "Stroomlijn Uw Kwaliteitsmanagement",
+      "subtitle": "Normik - Uw Complete Oplossing voor ISO-certificeringen, Documentbeheer en Kwaliteitsborging",
+      "description": "Beheer ISO 9001, ISO 45001, VCA en HKZ-certificeringen met gemak. Centraliseer uw documenten, stroomlijn workflows en zorg voor naleving.",
+      "cta_primary": "Aan de Slag",
+      "cta_secondary": "Meer Informatie"
+    },
+    "features": {
+      "title": "Krachtige Functies voor Kwaliteitsmanagement",
+      "subtitle": "Alles wat u nodig heeft om naleving te behouden en kwaliteit te verbeteren",
+      "certification_management": {
+        "title": "Certificeringsbeheer",
+        "description": "Beheer meerdere certificeringen, waaronder ISO 9001, ISO 45001, VCA en HKZ-standaarden, op één gecentraliseerd platform."
+      },
+      "document_management": {
+        "title": "Documentbeheer",
+        "description": "Upload, organiseer en toegang tot al uw kwaliteitsdocumenten, handboeken en procedures met geavanceerde zoekmogelijkheden."
+      },
+      "workflow_automation": {
+        "title": "Workflowautomatisering",
+        "description": "Automatiseer routinetaken, volg nalevingsactiviteiten en beheer uw kwaliteitskalender met gemak."
+      },
+      "user_management": {
+        "title": "Gebruikersbeheer",
+        "description": "Beheer toegang, beheer rollen en zorg ervoor dat de juiste mensen toegang hebben tot de juiste informatie."
+      },
+      "reporting": {
+        "title": "Rapportage & Analyse",
+        "description": "Volg voortgang, genereer rapporten en krijg inzicht in de prestaties van uw kwaliteitsmanagementsysteem."
+      },
+      "compliance": {
+        "title": "Nalevingsvolging",
+        "description": "Blijf op de hoogte van audits, inspecties en nalevingsvereisten met geautomatiseerde herinneringen en volging."
+      }
+    },
+    "benefits": {
+      "title": "Waarom Normik Kiezen?",
+      "subtitle": "Transformeer uw kwaliteitsmanagementproces",
+      "efficiency": {
+        "title": "Bespaar Tijd",
+        "description": "Verminder administratieve overhead en focus op wat het belangrijkst is - het leveren van kwaliteitszorg."
+      },
+      "compliance": {
+        "title": "Blijf Naleven",
+        "description": "Mis nooit een deadline met geautomatiseerde tracking en herinneringen voor alle certificeringsvereisten."
+      },
+      "collaboration": {
+        "title": "Betere Samenwerking",
+        "description": "Maak naadloze samenwerking tussen teams mogelijk met gecentraliseerde documenttoegang en real-time updates."
+      },
+      "scalability": {
+        "title": "Schaal met Vertrouwen",
+        "description": "Groei uw organisatie wetende dat uw kwaliteitsmanagementsysteem met u mee kan groeien."
+      }
+    },
+    "stats": {
+      "title": "Vertrouwd door Organisaties",
+      "organizations": "Organisaties",
+      "documents": "Beheerde Documenten",
+      "certifications": "Actieve Certificeringen",
+      "users": "Actieve Gebruikers"
+    },
+    "cta": {
+      "title": "Klaar om Uw Kwaliteitsmanagement te Transformeren?",
+      "description": "Sluit u aan bij organisaties die Normik vertrouwen voor hun kwaliteitsmanagementbehoeften.",
+      "button": "Start Gratis Proefperiode",
+      "contact": "Neem Contact Op"
+    }
   }
 }

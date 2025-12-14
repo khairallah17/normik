@@ -55,7 +55,7 @@ export default function CertificationPage({ params }: PageProps) {
       <div>
         <h1 className="text-3xl font-bold">{certificationName}</h1>
         <p className="text-muted-foreground mt-2">
-          {t(`${certification}_description` as any) || 'Certification overview'}
+          {t(`${certification}_description` as keyof typeof t) || 'Certification overview'}
         </p>
       </div>
 
@@ -66,7 +66,7 @@ export default function CertificationPage({ params }: PageProps) {
             <CardTitle>Documents</CardTitle>
           </CardHeader>
           <CardContent>
-            <DocumentViewer documents={documents} />
+            <DocumentViewer documents={documents} sectionTitle={certificationName} />
           </CardContent>
         </Card>
       )}

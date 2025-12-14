@@ -5,7 +5,7 @@ import { useTranslations } from 'next-intl'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
-import { PlannerTask, TaskFormData } from '@/types/calendar'
+import { PlannerTask, TaskFormData, TaskPriority, TaskStatus } from '@/types/calendar'
 import { mockTasks } from '@/lib/mock-calendar'
 import { 
   Plus, 
@@ -337,7 +337,7 @@ function TaskFormModal({ onSave, onCancel }: TaskFormModalProps) {
                 <label className="text-sm font-medium">{t('task_form.priority')}</label>
                 <select
                   value={formData.priority}
-                  onChange={(e) => setFormData(prev => ({ ...prev, priority: e.target.value as any }))}
+                  onChange={(e) => setFormData(prev => ({ ...prev, priority: e.target.value as TaskPriority }))}
                   className="w-full mt-1 px-3 py-2 border border-gray-300 rounded-md"
                 >
                   <option value="low">Low</option>
@@ -350,7 +350,7 @@ function TaskFormModal({ onSave, onCancel }: TaskFormModalProps) {
                 <label className="text-sm font-medium">{t('task_form.status')}</label>
                 <select
                   value={formData.status}
-                  onChange={(e) => setFormData(prev => ({ ...prev, status: e.target.value as any }))}
+                  onChange={(e) => setFormData(prev => ({ ...prev, status: e.target.value as TaskStatus }))}
                   className="w-full mt-1 px-3 py-2 border border-gray-300 rounded-md"
                 >
                   <option value="pending">{t('statuses.pending')}</option>

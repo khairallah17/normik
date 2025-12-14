@@ -153,7 +153,7 @@ export function UsersManagement() {
         <CardHeader>
           <CardTitle>Users</CardTitle>
           <CardDescription>
-            Manage your organization's users and their permissions
+            Manage your organization&apos;s users and their permissions
           </CardDescription>
         </CardHeader>
         <CardContent>

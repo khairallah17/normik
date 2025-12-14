@@ -71,7 +71,7 @@ export function ModulePage({ moduleKey, kamUrl, description }: ModulePageProps) 
         <CardContent>
           <p className="text-sm text-muted-foreground">
             This module is integrated from the KAM system. Use the interface above to manage {moduleTitle.toLowerCase()}.
-            If the content does not load, click the "Open in KAM System" button to access it directly.
+            If the content does not load, click the &quot;Open in KAM System&quot; button to access it directly.
           </p>
         </CardContent>
       </Card>

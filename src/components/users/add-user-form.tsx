@@ -60,7 +60,7 @@ export function AddUserForm({ onSave, onCancel, loading, existingUsers }: AddUse
     if (!formData.username.trim()) {
       newErrors.username = t('form.required_field')
     }
-    if (!formData.email.trim()) {
+    if (!formData.email?.trim()) {
       newErrors.email = t('form.required_field')
     }
 

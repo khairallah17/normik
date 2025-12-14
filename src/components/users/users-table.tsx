@@ -145,7 +145,7 @@ export function UsersTable({
                   checked={isAllSelected}
                   onCheckedChange={handleSelectAll}
                   ref={(el) => {
-                    if (el) el.indeterminate = isIndeterminate
+                    if (el && el instanceof HTMLInputElement) el.indeterminate = isIndeterminate
                   }}
                 />
               </TableHead>

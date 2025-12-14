@@ -37,7 +37,7 @@ export default function DocumentViewPage({ params }: PageProps) {
   const docxContainerRef = useRef<HTMLDivElement>(null)
   const [isLoading, setIsLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
-  const [excelData, setExcelData] = useState<{ sheetName: string; data: any[][] }[]>([])
+  const [excelData, setExcelData] = useState<{ sheetName: string; data: (string | number | boolean | null)[][] }[]>([])
   const [activeSheet, setActiveSheet] = useState(0)
   const [isRendered, setIsRendered] = useState(false)
   
@@ -163,7 +163,7 @@ export default function DocumentViewPage({ params }: PageProps) {
               renderFooters: true,
               useBase64URL: true
             })
-          } catch (renderError: any) {
+          } catch (renderError: unknown) {
             // If renderAsync fails (especially for .doc files), try Office Online Viewer
             console.warn('docx-preview failed, trying Office Online Viewer:', renderError)
             
@@ -212,7 +212,9 @@ export default function DocumentViewPage({ params }: PageProps) {
                 </a>
               `
               
-              wrapper.appendChild(infoDiv)
+              if (wrapper) {
+                wrapper.appendChild(infoDiv)
+              }
               
               // Clean up blob URL after reasonable time
               setTimeout(() => {
@@ -257,7 +259,9 @@ export default function DocumentViewPage({ params }: PageProps) {
               if (loadError) return // Already handled
               loadError = true
               
-              wrapper.innerHTML = ''
+              if (wrapper) {
+                wrapper.innerHTML = ''
+              }
               const blobUrl = URL.createObjectURL(blob)
               
               const infoDiv = document.createElement('div')
@@ -289,7 +293,9 @@ export default function DocumentViewPage({ params }: PageProps) {
                 </a>
               `
               
-              wrapper.appendChild(infoDiv)
+              if (wrapper) {
+                wrapper.appendChild(infoDiv)
+              }
               
               // Clean up blob URL after reasonable time
               setTimeout(() => {
@@ -339,7 +345,7 @@ export default function DocumentViewPage({ params }: PageProps) {
 
           setIsRendered(true)
           setIsLoading(false)
-        } catch (err: any) {
+        } catch (err: unknown) {
           console.error('Error rendering document:', err)
           
           // If we get here, there was an error that wasn't handled by the renderError catch
@@ -390,7 +396,7 @@ export default function DocumentViewPage({ params }: PageProps) {
         const workbook = XLSX.read(buffer, { type: 'array' })
         const sheets = workbook.SheetNames.map(sheetName => {
           const worksheet = workbook.Sheets[sheetName]
-          const data = XLSX.utils.sheet_to_json(worksheet, { header: 1 }) as any[][]
+          const data = XLSX.utils.sheet_to_json(worksheet, { header: 1 }) as (string | number | boolean | null)[][]
           return { sheetName, data }
         })
         setExcelData(sheets)
@@ -595,9 +601,9 @@ export default function DocumentViewPage({ params }: PageProps) {
                   <div className="overflow-x-auto rounded-lg border dark:border-gray-700">
                     <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
                       <tbody className="bg-white dark:bg-gray-900 divide-y divide-gray-200 dark:divide-gray-700">
-                        {excelData[activeSheet]?.data.map((row: any[], rowIndex: number) => (
+                        {excelData[activeSheet]?.data.map((row: (string | number | boolean | null)[], rowIndex: number) => (
                           <tr key={rowIndex} className={rowIndex === 0 ? 'bg-gray-50 dark:bg-gray-800' : ''}>
-                            {row.map((cell: any, cellIndex: number) => (
+                            {row.map((cell: string | number | boolean | null, cellIndex: number) => (
                               <td
                                 key={cellIndex}
                                 className={`px-4 py-2 text-sm whitespace-nowrap ${

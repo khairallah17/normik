@@ -3,7 +3,7 @@ import prisma from '../../utils/db'
 import app from '../../index'
 
 // Helper to make requests to Hono app
-const request = async (method: string, path: string, body?: any) => {
+const request = async (method: string, path: string, body?: unknown) => {
   const url = new URL(`http://localhost${path}`)
   const request = new Request(url.toString(), {
     method,
@@ -73,7 +73,7 @@ describe('Work Plans API', () => {
       
       expect(response.status).toBe(200)
       expect(response.body.data).toHaveLength(2)
-      expect(response.body.data.every((plan: any) => plan.title.includes('Project'))).toBe(true)
+      expect(response.body.data.every((plan: { title: string }) => plan.title.includes('Project'))).toBe(true)
     })
 
     it('should search by location', async () => {

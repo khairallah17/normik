@@ -2,7 +2,7 @@ import { createTestPersonnel, cleanupDatabase } from '../../__tests__/helpers'
 import prisma from '../../utils/db'
 import app from '../../index'
 
-const request = async (method: string, path: string, body?: any) => {
+const request = async (method: string, path: string, body?: unknown) => {
   const url = new URL(`http://localhost${path}`)
   const request = new Request(url.toString(), {
     method,
@@ -52,7 +52,7 @@ describe('Personnel API', () => {
       
       expect(response.status).toBe(200)
       expect(response.body.data).toHaveLength(2)
-      expect(response.body.data.every((p: any) => p.outOfService === true)).toBe(true)
+      expect(response.body.data.every((p: { outOfService: boolean }) => p.outOfService === true)).toBe(true)
     })
 
     it('should support search', async () => {
@@ -63,7 +63,7 @@ describe('Personnel API', () => {
       
       expect(response.status).toBe(200)
       expect(response.body.data.length).toBeGreaterThan(0)
-      expect(response.body.data.some((p: any) => p.firstName === 'John')).toBe(true)
+      expect(response.body.data.some((p: { firstName: string }) => p.firstName === 'John')).toBe(true)
     })
   })
 

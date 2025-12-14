@@ -2,7 +2,7 @@ import { createTestWorkEquipment, cleanupDatabase } from '../../__tests__/helper
 import prisma from '../../utils/db'
 import app from '../../index'
 
-const request = async (method: string, path: string, body?: any) => {
+const request = async (method: string, path: string, body?: unknown) => {
   const url = new URL(`http://localhost${path}`)
   const request = new Request(url.toString(), {
     method,
@@ -52,7 +52,7 @@ describe('Work Equipment API', () => {
       
       expect(response.status).toBe(200)
       expect(response.body.data).toHaveLength(2)
-      expect(response.body.data.every((e: any) => e.removed === true)).toBe(true)
+      expect(response.body.data.every((e: { removed: boolean }) => e.removed === true)).toBe(true)
     })
 
     it('should filter by type', async () => {
@@ -64,7 +64,7 @@ describe('Work Equipment API', () => {
       
       expect(response.status).toBe(200)
       expect(response.body.data).toHaveLength(2)
-      expect(response.body.data.every((e: any) => e.type === 'Tool')).toBe(true)
+      expect(response.body.data.every((e: { type: string }) => e.type === 'Tool')).toBe(true)
     })
 
     it('should support search', async () => {

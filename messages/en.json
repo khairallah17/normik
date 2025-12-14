@@ -479,5 +479,75 @@
       "completed": "Completed",
       "cancelled": "Cancelled"
     }
+  },
+  "landing": {
+    "hero": {
+      "title": "Streamline Your Quality Management",
+      "subtitle": "Normik - Your Complete Solution for ISO Certifications, Document Management, and Quality Assurance",
+      "description": "Manage ISO 9001, ISO 45001, VCA, and HKZ certifications with ease. Centralize your documents, streamline workflows, and ensure compliance.",
+      "cta_primary": "Get Started",
+      "cta_secondary": "Learn More"
+    },
+    "features": {
+      "title": "Powerful Features for Quality Management",
+      "subtitle": "Everything you need to maintain compliance and improve quality",
+      "certification_management": {
+        "title": "Certification Management",
+        "description": "Manage multiple certifications including ISO 9001, ISO 45001, VCA, and HKZ standards in one centralized platform."
+      },
+      "document_management": {
+        "title": "Document Management",
+        "description": "Upload, organize, and access all your quality documents, handbooks, and procedures with advanced search capabilities."
+      },
+      "workflow_automation": {
+        "title": "Workflow Automation",
+        "description": "Automate routine tasks, track compliance activities, and manage your quality calendar with ease."
+      },
+      "user_management": {
+        "title": "User Management",
+        "description": "Control access, manage roles, and ensure the right people have access to the right information."
+      },
+      "reporting": {
+        "title": "Reporting & Analytics",
+        "description": "Track progress, generate reports, and gain insights into your quality management system performance."
+      },
+      "compliance": {
+        "title": "Compliance Tracking",
+        "description": "Stay on top of audits, inspections, and compliance requirements with automated reminders and tracking."
+      }
+    },
+    "benefits": {
+      "title": "Why Choose Normik?",
+      "subtitle": "Transform your quality management process",
+      "efficiency": {
+        "title": "Save Time",
+        "description": "Reduce administrative overhead and focus on what matters most - delivering quality care."
+      },
+      "compliance": {
+        "title": "Stay Compliant",
+        "description": "Never miss a deadline with automated tracking and reminders for all certification requirements."
+      },
+      "collaboration": {
+        "title": "Better Collaboration",
+        "description": "Enable seamless collaboration across teams with centralized document access and real-time updates."
+      },
+      "scalability": {
+        "title": "Scale with Confidence",
+        "description": "Grow your organization knowing your quality management system can scale with you."
+      }
+    },
+    "stats": {
+      "title": "Trusted by Organizations",
+      "organizations": "Organizations",
+      "documents": "Documents Managed",
+      "certifications": "Active Certifications",
+      "users": "Active Users"
+    },
+    "cta": {
+      "title": "Ready to Transform Your Quality Management?",
+      "description": "Join organizations that trust Normik for their quality management needs.",
+      "button": "Start Free Trial",
+      "contact": "Contact Sales"
+    }
   }
 }

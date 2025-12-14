@@ -2,7 +2,7 @@ import { createTestNotification, cleanupDatabase, getDateYearsAgo } from '../../
 import prisma from '../../utils/db'
 import app from '../../index'
 
-const request = async (method: string, path: string, body?: any) => {
+const request = async (method: string, path: string, body?: unknown) => {
   const url = new URL(`http://localhost${path}`)
   const request = new Request(url.toString(), {
     method,

@@ -26,8 +26,8 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select'
-import { UserFormData } from '@/types/users'
-import { User, Mail, Phone, UserCheck, Building, Shield } from 'lucide-react'
+import { UserFormData, User } from '@/types/users'
+import { User as UserIcon, Mail, Phone, UserCheck, Building, Shield } from 'lucide-react'
 
 interface AddUserDialogProps {
   open: boolean
@@ -69,7 +69,7 @@ export function AddUserDialog({ open, onOpenChange, onSave, existingUsers }: Add
     if (!formData.username.trim()) {
       newErrors.username = t('form.required_field')
     }
-    if (!formData.email.trim()) {
+    if (!formData.email?.trim()) {
       newErrors.email = t('form.required_field')
     }
 
@@ -133,7 +133,7 @@ export function AddUserDialog({ open, onOpenChange, onSave, existingUsers }: Add
       <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto">
         <DialogHeader>
           <DialogTitle className="flex items-center gap-2">
-            <User className="h-5 w-5" />
+            <UserIcon className="h-5 w-5" />
             {t('title')}
           </DialogTitle>
           <DialogDescription>
@@ -144,7 +144,7 @@ export function AddUserDialog({ open, onOpenChange, onSave, existingUsers }: Add
         <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
           <TabsList className="grid w-full grid-cols-4">
             <TabsTrigger value="user_details" className="flex items-center gap-2">
-              <User className="h-4 w-4" />
+              <UserIcon className="h-4 w-4" />
               {t('tabs.user_details')}
             </TabsTrigger>
             <TabsTrigger value="application" className="flex items-center gap-2">

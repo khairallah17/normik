@@ -5,7 +5,7 @@ import { useTranslations } from 'next-intl'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
-import { CalendarEvent, EventFormData } from '@/types/calendar'
+import { CalendarEvent, EventFormData, EventCategory, EventPriority } from '@/types/calendar'
 import { mockEvents } from '@/lib/mock-calendar'
 import { 
   Plus, 
@@ -289,7 +289,7 @@ function EventFormModal({ onSave, onCancel }: EventFormModalProps) {
                 <label className="text-sm font-medium">{t('event_form.category')}</label>
                 <select
                   value={formData.category}
-                  onChange={(e) => setFormData(prev => ({ ...prev, category: e.target.value as any }))}
+                  onChange={(e) => setFormData(prev => ({ ...prev, category: e.target.value as EventCategory }))}
                   className="w-full mt-1 px-3 py-2 border border-gray-300 rounded-md"
                 >
                   <option value="meeting">{t('categories.meeting')}</option>
@@ -303,7 +303,7 @@ function EventFormModal({ onSave, onCancel }: EventFormModalProps) {
                 <label className="text-sm font-medium">{t('event_form.priority')}</label>
                 <select
                   value={formData.priority}
-                  onChange={(e) => setFormData(prev => ({ ...prev, priority: e.target.value as any }))}
+                  onChange={(e) => setFormData(prev => ({ ...prev, priority: e.target.value as EventPriority }))}
                   className="w-full mt-1 px-3 py-2 border border-gray-300 rounded-md"
                 >
                   <option value="low">{t('priorities.low')}</option>
