@@ -58,10 +58,6 @@ USER nextjs
 # Expose port
 EXPOSE 8090
 
-# Health check
-HEALTHCHECK --interval=30s --timeout=10s --start-period=40s --retries=3 \
-  CMD node -e "require('http').get('http://localhost:8090/api/hello', (r) => {process.exit(r.statusCode === 200 ? 0 : 1)})"
-
 # Start Next.js server
 CMD ["node", "server.js"]
 
