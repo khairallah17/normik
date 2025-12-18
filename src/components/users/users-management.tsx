@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect } from 'react'
 import { useTranslations } from 'next-intl'
 import { useRouter } from '@/i18n/routing'
 import { Button } from '@/components/ui/button'
@@ -9,6 +9,13 @@ import { UsersTable } from './users-table'
 import { BulkActions } from './bulk-actions'
 import { User } from '@/types/users'
 import { mockUsers } from '@/lib/mock-users'
+import { useAppDispatch, useAppSelector } from '@/store/hooks'
+import {
+  setUsers,
+  setSelectedUsers,
+  clearSelection,
+  deleteUsers,
+} from '@/store/slices/usersSlice'
 import { 
   Plus, 
   Download, 
@@ -26,8 +33,16 @@ import {
 export function UsersManagement() {
   const t = useTranslations('users')
   const router = useRouter()
-  const [users, setUsers] = useState<User[]>(mockUsers)
-  const [selectedUsers, setSelectedUsers] = useState<string[]>([])
+  const dispatch = useAppDispatch()
+  const users = useAppSelector((state) => state.users.users)
+  const selectedUsers = useAppSelector((state) => state.users.selectedUsers)
+
+  // Initialize users from mock data on mount
+  useEffect(() => {
+    if (users.length === 0) {
+      dispatch(setUsers(mockUsers))
+    }
+  }, [dispatch, users.length])
 
   const handleEditUser = (user: User) => {
     console.log('Edit user:', user)
@@ -35,8 +50,7 @@ export function UsersManagement() {
   }
 
   const handleDeleteUser = (user: User) => {
-    console.log('Delete user:', user)
-    // TODO: Implement delete user functionality
+    dispatch(deleteUsers([user.id]))
   }
 
   const handleViewUser = (user: User) => {
@@ -46,8 +60,11 @@ export function UsersManagement() {
 
   const handleBulkAction = (action: string, userIds: string[]) => {
     console.log('Bulk action:', action, 'on users:', userIds)
-    // TODO: Implement bulk actions
-    setSelectedUsers([])
+    if (action === 'delete') {
+      dispatch(deleteUsers(userIds))
+    }
+    // TODO: Implement other bulk actions
+    dispatch(clearSelection())
   }
 
   const handleAddUser = () => {
@@ -163,6 +180,8 @@ export function UsersManagement() {
             onDeleteUser={handleDeleteUser}
             onViewUser={handleViewUser}
             onBulkAction={handleBulkAction}
+            selectedUsers={selectedUsers}
+            onSelectionChange={(userIds: string[]) => dispatch(setSelectedUsers(userIds))}
           />
         </CardContent>
       </Card>

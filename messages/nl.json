@@ -155,19 +155,24 @@
       "vca_description": "VCA Managementsysteem",
       "general": "Algemeen",
       "general_description": "Algemene informatie en relevante wet- en regelgeving",
-      "laws_regulations": "Relevante wet- en regelgeving",
+      "relevant_laws_regulations": "Relevante wet- en regelgeving",
       "policy": "Beleid",
       "vca_certificate": "VCA Certificaat",
       "policy_statement": "Beleidsverklaring veiligheid, gezondheid en milieu",
+      "organogram": "Organogram",
       "job_description_director": "Functieomschrijving directeur",
       "job_description_executor": "Functieomschrijving uitvoerder",
       "job_description_vgm_officer": "Functieomschrijving VGM-functionaris",
       "qualification_vgm_officer": "Kwalificatie VGM-functionaris",
       "qualification_external_vgm_expert": "Kwalificatie externe VGM deskundige",
+      "diplomas_certificates_vgm_officer": "Diploma's, attesten, getuigschriften VGM-functionaris",
+      "appointment_letter_vgm_officer": "Aanstellingsbrief VGM functionaris",
       "personnel_assessments": "Personeelsbeoordelingen",
       "internal_audit_reports": "Interne auditverslagen",
       "external_audit_reports": "Externe auditverslagen",
       "management_reviews": "Directiebeoordelingen",
+      "internal_audit_report": "Intern auditverslag",
+      "management_review_year_plan": "Directiebeoordeling/jaarplan",
       "risks": "Risico's",
       "frm_tra": "FRM TRA",
       "risk_inventory_evaluation": "Risico Inventarisatie en Evaluatie (RIE)",
@@ -533,39 +538,145 @@
   "vca_content": {
     "general": {
       "title": "Algemeen",
-      "description": "Algemene informatie en relevante wet- en regelgeving voor VCA-naleving."
+      "description": "Algemene informatie en relevante wet- en regelgeving voor VCA-naleving.",
+      "content": "1. Toepassingsgebied\n\nBedrijfsnaam: Optic Infra BV\nDirectie: I. Bakkali, A. Yurdakul, F. Yurdakul\nKAM-coördinator (VGM functionaris):\nAdres Hoofdvestiging: Dedemsvaartweg 482, 2545 AR Den Haag, Nederland\nTelefoon: 0613967043\nFax:\nE-mail: info@opticinfra.nl\nInternet: www.opticinfra.nl\nKamer van Koophandel: 89676165\n\n2. Juridische status\n\nOptic Infra BV is een zelfstandige rechtspersoon en maakt geen onderdeel uit van een concern.\n\n3. Toepassingsgebied\n\nHet VCA systeem is van toepassing op:",
+      "laws_regulations": {
+        "title": "Relevante wet- en regelgeving",
+        "regulations": [
+          {
+            "name": "Arbowet",
+            "url": "https://wetten.overheid.nl/BWBR0010346",
+            "administrator": "Overheid"
+          },
+          {
+            "name": "Arbobesluit",
+            "url": "https://wetten.overheid.nl/BWBR0008498",
+            "administrator": "Overheid"
+          },
+          {
+            "name": "Arboregeling",
+            "url": "https://wetten.overheid.nl/BWBR0008587",
+            "administrator": "Overheid"
+          },
+          {
+            "name": "Arbocatalogus bouw en infra",
+            "url": "http://www.arbocatalogus-bouweninfra.nl/",
+            "administrator": "Sociale partners"
+          },
+          {
+            "name": "Besluit inzamelen afvalstoffen",
+            "url": "http://wetten.overheid.nl/BWBR0016530/",
+            "administrator": "Overheid"
+          },
+          {
+            "name": "Regeling VIHB",
+            "url": "http://wetten.overheid.nl/BWBR0016608/",
+            "administrator": "Overheid"
+          },
+          {
+            "name": "Regeling Europese afvalstoffenlijst",
+            "url": "http://wetten.overheid.nl/BWBR0013546/",
+            "administrator": "Overheid"
+          },
+          {
+            "name": "Regeling integrale tekst Afvalstoffenlijst",
+            "url": "http://wetten.overheid.nl/BWBR0013549/",
+            "administrator": "Overheid"
+          },
+          {
+            "name": "Wet milieubeheer",
+            "url": "http://wetten.overheid.nl/BWBR0003245/",
+            "administrator": "Overheid"
+          },
+          {
+            "name": "Landelijk Afvalbeheer Plan 3 (LAP3)",
+            "url": "https://lap3.nl/",
+            "administrator": "Overheid"
+          },
+          {
+            "name": "PGS 15",
+            "url": "https://publicatiereeksgevaarlijkestoffen.nl/publicaties/PGS15.html",
+            "administrator": "Overheid"
+          },
+          {
+            "name": "VCA",
+            "url": "https://www.vca.nl/application/files/3015/8084/7119/VCA-checklist-2017-6-0.pdf",
+            "administrator": "Directeur"
+          }
+        ]
+      }
     },
     "policy": {
       "title": "1. Beleid",
       "description": "Het VCA-beleid omvat beleidsverklaringen, organisatiestructuur, functieomschrijvingen, beoordelingen en directiebeoordelingen.",
       "policy_statement": {
         "title": "Beleidsverklaring (VCA 1.1)",
-        "content": "De directie heeft het VGM-beleid vastgelegd en bekrachtigd (d.m.v. ondertekening) in een beleidsverklaring. Deze verklaring wordt driejaarlijks geëvalueerd en zo nodig geactualiseerd.\n\nDe beleidsverklaring wordt binnen het gehele bedrijf gecommuniceerd d.m.v. het introductie-/ voorlichting programma (nieuwe) eigen en tijdelijke medewerkers. Ook wordt het beleid gecommuniceerd met medewerkers.",
-        "references": ["Beleidsverklaring"]
+        "content": "Het bestuur van Optic Infra is zich bewust van haar verantwoordelijkheid met betrekking tot de zorg voor Veiligheid, Gezondheid, Welzijn en Milieu (VGWM).\n\nHet creëren en handhaven van veilige en milieuverantwoorde arbeidsomstandigheden zijn in onze organisatie belangrijke doelstellingen en een vast onderdeel van het algemene bedrijfsbeleid. Het VGWM-beleid is erop gericht persoonlijk letsel, branden, schade en blootstellingen aan gevaarlijke stoffen te voorkomen alsmede negatieve effecten op het milieu zoveel mogelijk te beperken. Daarnaast zal, in het geval van (gedeeltelijke) arbeidsongeschiktheid bij medewerkers in dienst na bijvoorbeeld een ongeval of bedrijfsziekte, in overleg met Arbodienst en andere deskundige gezocht worden naar passend werk binnen de organisatie. Ook zal de WET Poortwachter nageleefd worden.\n\nNaar beste vermogen zullen wij in onze organisatie op een dusdanige wijze handelen zodat de Veiligheid, Gezondheid, Welzijn en Milieu ten opzichte van onze werknemers, tijdelijke werknemers, inleners, opdrachtgevers, onderaannemers, bezoekers en derden is gewaarborgd en zij niet worden blootgesteld aan onaanvaardbare risico's, discriminatie, intimidatie en geweld.\n\nEr zal voor gezorgd worden dat de overheidsregels strikt worden nageleefd en er zal naar continu verbetering gestreefd worden op het gebied van Veiligheid, Gezondheid, Welzijn en Milieu.\n\nBinnen het bedrijf wordt iedereen op de hoogte gebracht en gehouden aangaande de VGWM-verantwoordelijkheden, -procedures en -instructies. Dit gebeurt door middel van voorlichting, training en instructie. De directie heeft het VGM-beleid vastgelegd en bekrachtigd (d.m.v. ondertekening) in een beleidsverklaring. Deze verklaring wordt driejaarlijks geëvalueerd en zo nodig geactualiseerd.\n\nDe beleidsverklaring wordt binnen het gehele bedrijf gecommuniceerd d.m.v. het introductie-/ voorlichting programma (nieuwe) eigen en tijdelijke medewerkers. Ook wordt het beleid gecommuniceerd met medewerkers.",
+        "references": ["policy_statement"]
       },
       "ohs_officer": {
         "title": "VGM-functionaris (VCA 1.2)",
         "content": "Binnen het bedrijf is een VGM-functionaris aangesteld (zie organogram en aanstellingsbrief), die verantwoordelijk is voor het coördineren van de VGM-aspecten binnen het bedrijf bij de dagelijkse gang van zaken.\n\nDe VGM-functionaris rapporteert rechtstreeks aan de directie. De taken, verantwoordelijkheden, bevoegdheden en eisen zijn verder uitgewerkt in een functieomschrijving.",
-        "references": ["Organogram", "Functieomschrijving VGM-functionaris", "Diploma's, attesten, getuigschriften VGM-functionaris", "Aanstellingsbrief VGM functionaris"]
+        "references": ["organogram", "job_description_vgm_officer", "diplomas_certificates_vgm_officer", "appointment_letter_vgm_officer"]
       },
       "ohs_structure": {
         "title": "VGM-structuur (VCA 1.3)",
         "content": "De VGM-structuur is schematisch weergegeven in het organogram.\n\nVoor alle leidinggevende functies en voor de VGM-functionaris zijn functieomschrijvingen beschikbaar, waarin de taken, verantwoordelijkheden en bevoegdheden duidelijk zijn beschreven.",
-        "references": ["Organogram", "Functieomschrijving directeur", "Functieomschrijving uitvoerder", "Functieomschrijving VGM-functionaris"]
+        "references": ["organogram", "job_description_director", "job_description_executor", "job_description_vgm_officer"]
+      },
+      "job_description_director": {
+        "title": "Functieomschrijving directeur",
+        "content": "Plaats in de organisatie\nAls directeur eindverantwoordelijk voor het hele bedrijf. Legt verantwoording af aan de aandeelhouders.\n\nIs eindverantwoordelijk en draagt zorg voor de uitvoering van:\n- het ondernemingsbeleid;\n- het VGM-beleid;\n- het personeelsbeleid.\n\nTaken en bevoegdheden\n- waarborgen van de continuïteit van de onderneming;\n- onderhouden van contacten met opdrachtgevers, onderaannemers en overige stakeholders;\n- de beoordeling van het managementsysteem;\n- periodiek (minimaal 4 maal per jaar) uitvoeren van een werkplekinspectie;\n- organiseren van overleg (waaronder de toolboxmeetings);\n- begeleiding van de medewerkers;\n- dagelijkse uitvoering van het personeels-, VGM- en scholingsbeleid;\n- behandeling van klachten, tekortkomingen, ongevallen en incidenten en rapporteren.\n\nVervanging\nDe directeur wordt vervangen door de administratie voor administratieve en financiële zaken en door de uitvoerder voor de projectzaken."
+      },
+      "job_description_executor": {
+        "title": "Functieomschrijving uitvoerder",
+        "content": "Plaats in de organisatie\nAls operationeel leidinggevende verantwoording verschuldigd aan de directeur.\n\nTaken en bevoegdheden\n- dagelijkse uitvoering van het project en de daarmee verbonden borging van VGM;\n- zorgdragen voor een efficiënte werkvolgorde en indeling;\n- materiaal- en materieelbeheer op de werklocatie;\n- handhaving en coördinatie van regels met betrekking tot veiligheid, gezondheid en milieu op de werkplek (VGM-projectcoördinator);\n- het namens het bedrijf onderhouden van contacten met: opzichters van/ namens de opdrachtgevers, omwonenden, in voorkomende gevallen met opdrachtgevers, zonodig samen met de uitvoerder, overige betrokkenen;\n- inwerken van nieuwe medewerkers;\n- stilleggen van de werkzaamheden bij dreigend gevaar voor veiligheid, gezondheid of milieu;\n- geven van aanwijzingen en opdrachten aan de medewerkers.\n\nVervanging\nDe uitvoerder wordt vervangen door de directeur, een collega uitvoerder of een ervaren voorman.\n\nFunctie-eisen\n- MBO-niveau in een technische richting;\n- geldig certificaat Veiligheid voor Operationeel Leidinggevenden VCA (VOL-VCA);\n- geldig Rijbewijs BE"
+      },
+      "job_description_vgm_officer": {
+        "title": "Functieomschrijving VGM-functionaris",
+        "content": "Plaats in de organisatie\nDe VGM-functionaris is verantwoording verschuldigd aan de bestuurder. Hij heeft geen leidinggevende taken.\n\nDe VGM-functionaris vervult tevens de rol van van preventiemedewerker binnen het bedrijf.\n\nVerantwoordelijkheid\nDe VGM-functionaris is mede-verantwoordelijk voor het coördineren van de VGM-aspecten binnen het bedrijf bij de dagelijkse gang van zaken en het waarborgen van de inbreng van expertise daarbij. Hij draagt onder andere zorg voor het invoeren en het in stand houden van het managementsysteem in overeenstemming met de wettelijke en normatieve eisen.\n\nTaken/verantwoordelijkheden\n- Opstellen en onderhouden het managementsysteem.\n- Uitvoeren interne audits.\n- Ondersteunen uitvoeren risico inventarisatie en evaluatie en taakrisicoanalyses.\n- Verwerken VGM-registraties, rapporteren bevindingen aan de directie.\n- Toezien op de naleving van het managementsysteem en zo nodig ingrijpen om bij te sturen;\n- Behandelen ongevallen en tekortkomingen: onderzoek/ oorzaakanalyse, corrigerende maatregelen, implementatie, registratie.\n- Adviseren ten aanzien van veiligheid, gezondheid en milieu (directie, organisatie).\n- Voorbereiden directiebeoordeling (presenteren informatie, registratie).\n- Monitoring van veiligheid, gezondheid en welzijn van de medewerkers (indien nodig met ondersteuning van de arbodienst of andere externe deskundigen).\n\nBevoegdheden\n- Alle bevoegdheden om bovenstaande taken uit te kunnen voeren.\n- Het treffen van corrigerende en preventieve maatregelen.\n- Zo nodig ingrijpen in de voortgang van het bedrijfsproces.\n- Waar nodig werkzaamheden onderbreken voor het geven van instructie en /of toelichting.\n\nOpleidings- en ervaringseisen\n- MBO werk- en denkniveau.\n- Verworven branchegerelateerde deskundigheid op het gebied van veiligheid, gezondheid en milieu (inclusief geldende wet- en regelgeving).\n- Goede beheersing van de Nederlandse taal in woord en geschrift.\n- Goede communicatieve vaardigheden.\n- Goede kennis van het eigen kwaliteitssysteem.\n- Geldig diploma VOL-VCA met (veiligheidskundige ondersteuning wordt geleverd door KAM-adviseur).\n- Bij voorkeur externe opleiding intern auditor.\n\nNoot: De veiligheidskundige ondersteuning dient aantoonbaar in het bezit te zijn van een diploma Middelbare Veiligheidskunde (MVK), Hogere Veiligheidskunde (HVK) of de Belgische equivalenten Preventieadviseur Niveau II of Niveau I.\n\nVervanging\nBij afwezigheid worden de taken waargenomen door de directeur of gedelegeerd naar de externe adviseur."
       },
       "management_assessment": {
         "title": "Beoordeling leidinggevenden (VCA 1.4)",
         "content": "De directeur beoordeelt alle leidinggevenden jaarlijks aan de hand van het beoordelingsformulier. Deze beoordeling is gebaseerd op de functieomschrijving. VGM is een nadrukkelijk onderwerp van gesprek.\n\nVan de beoordeling wordt een verslag gemaakt in het beoordelingsformulier. Eventuele acties worden met verantwoordelijke en planning opgenomen in het verslag.",
-        "references": ["Beoordelingsformulier"]
+        "references": ["personnel_assessments"]
       },
       "internal_audit": {
         "title": "Interne audit (VCA 1.5)",
-        "content": "Een interne audit is een interne beoordeling op het voldoen aan gestelde normen of eisen. De VGM-functionaris voert de interne audits jaarlijks uit volgens een vaste planning in het jaarplan. Hij wordt hierbij ondersteund door het formulier interne audit.\n\nEvenwichtig verdeeld over een periode van drie jaar worden alle van toepassing zijnde vragen uit de VCA-checklist beoordeeld. De resultaten van deze interne audits worden vastgelegd in een rapportage."
+        "content": "Een interne audit is een interne beoordeling op het voldoen aan gestelde normen of eisen. De VGM-functionaris voert de interne audits jaarlijks uit volgens een vaste planning in het jaarplan. Hij wordt hierbij ondersteund door het formulier interne audit.\n\nEvenwichtig verdeeld over een periode van drie jaar worden alle van toepassing zijnde vragen uit de VCA-checklist beoordeeld. De resultaten van deze interne audits worden vastgelegd in een rapportage.",
+        "references": []
       },
       "management_review": {
         "title": "Directiebeoordeling (VCA 1.6)",
         "content": "Jaarlijks beoordeelt de directie of het VCA**-systeem en de organisatie voldoen aan de VCA*-eisen. Als input voor deze beoordeling worden onder andere de volgende gegevens gebruikt:\n\n- Resultaten en effectiviteit van de voorgaande directiebeoordeling.\n- Rapportage en actieplan interne audit(s) (acties, termijnen, verantwoordelijken, vaststelling en evaluatie actiepunten voorgaande interne audit).\n- Rapportage externe audit(s).\n- Ongevallen met werkverlet, ongevallen met aangepast werk, ongevallen zonder verzuim/werkverlet (vanaf EHBO), bijna-ongevallen, onveilige situaties en handelingen en overige VGM-incidenten.\n- Doelstellingen en acties m.b.t. IF.\n- Risico Inventarisatie en Evaluatie (RIE), Milieu-RIE en Plan van Aanpak n.a.v. RIE (PvA).\n- Taak Risico Analyse (TRA's).\n- VGM-inspecties en actiepunten.\n- VGM-verantwoorde materialen, middelen en PBM.\n- Melding en onderzoek van ongevallen en incidenten.\n\nDe output van de beoordeling wordt vastgelegd in document directiebeoordeling/jaarplan, waarin concrete verbeteracties worden vastgesteld. De directie verzorgt de opvolging van het KAM-jaarplan inclusief de acties.",
-        "references": ["Intern auditverslag", "Directiebeoordeling/jaarplan"]
+        "references": ["internal_audit_report", "management_review_year_plan"]
+      },
+      "vca_certificate": {
+        "title": "VCA Certificaat",
+        "content": "VCA-certificaat is beschikbaar en geldig.\n\nCertificaat wordt regelmatig vernieuwd.\n\nCertificaat is toegankelijk voor alle medewerkers."
+      },
+      "qualification_vgm_officer": {
+        "title": "Kwalificatie VGM-functionaris",
+        "content": "De VGM-functionaris beschikt over de benodigde kwalificaties en competenties.\n\nDiploma's, attesten en getuigschriften van de VGM-functionaris zijn beschikbaar en actueel.\n\nDe VGM-functionaris volgt regelmatig bijscholing om kennis en vaardigheden up-to-date te houden.\n\nKwalificaties worden gedocumenteerd en bewaard in het personeelsdossier.",
+        "references": ["diplomas_certificates_vgm_officer"]
+      },
+      "personnel_assessments": {
+        "title": "Personeelsbeoordelingen",
+        "content": "De directeur beoordeelt alle leidinggevenden jaarlijks aan de hand van het beoordelingsformulier.\n\nDeze beoordeling is gebaseerd op de functieomschrijving. VGM is een nadrukkelijk onderwerp van gesprek.\n\nVan de beoordeling wordt een verslag gemaakt in het beoordelingsformulier.\n\nEventuele acties worden met verantwoordelijke en planning opgenomen in het verslag."
+      },
+      "internal_audit_reports": {
+        "title": "Interne auditverslagen",
+        "content": "Een interne audit is een interne beoordeling op het voldoen aan gestelde normen of eisen.\n\nDe VGM-functionaris voert de interne audits jaarlijks uit volgens een vaste planning in het jaarplan.\n\nHij wordt hierbij ondersteund door het formulier interne audit.\n\nEvenwichtig verdeeld over een periode van drie jaar worden alle van toepassing zijnde vragen uit de VCA-checklist beoordeeld.\n\nDe resultaten van deze interne audits worden vastgelegd in een rapportage.",
+        "references": ["internal_audit_report"]
+      },
+      "external_audit_reports": {
+        "title": "Externe auditverslagen",
+        "content": "Externe audits worden uitgevoerd door onafhankelijke auditors.\n\nExterne auditverslagen worden gedocumenteerd en beoordeeld.\n\nActiepunten uit externe audits worden opgevolgd."
+      },
+      "management_reviews": {
+        "title": "Directiebeoordelingen",
+        "content": "Jaarlijks beoordeelt de directie of het VCA**-systeem en de organisatie voldoen aan de VCA*-eisen.\n\nAls input voor deze beoordeling worden onder andere de volgende gegevens gebruikt:\n- Resultaten en effectiviteit van de voorgaande directiebeoordeling.\n- Rapportage en actieplan interne audit(s) (acties, termijnen, verantwoordelijken, vaststelling en evaluatie actiepunten voorgaande interne audit).\n- Rapportage externe audit(s).\n- Ongevallen met werkverlet, ongevallen met aangepast werk, ongevallen zonder verzuim/werkverlet (vanaf EHBO), bijna-ongevallen, onveilige situaties en handelingen en overige VGM-incidenten.\n- Doelstellingen en acties m.b.t. IF.\n- Risico Inventarisatie en Evaluatie (RIE), Milieu-RIE en Plan van Aanpak n.a.v. RIE (PvA).\n- Taak Risico Analyse (TRA's).\n- VGM-inspecties en actiepunten.\n- VGM-verantwoorde materialen, middelen en PBM.\n- Melding en onderzoek van ongevallen en incidenten.\n\nDe output van de beoordeling wordt vastgelegd in document directiebeoordeling/jaarplan, waarin concrete verbeteracties worden vastgesteld.\n\nDe directie verzorgt de opvolging van het KAM-jaarplan inclusief de acties.",
+        "references": ["management_review_year_plan"]
       }
     },
     "risks": {
@@ -586,46 +697,49 @@
     },
     "competence": {
       "title": "3. Bekwaamheid",
-      "description": "Introductie medewerkers, functietabel, veiligheid boekje, en communicatieplan."
+      "description": "Introductie medewerkers, functietabel, veiligheid boekje, en communicatieplan.",
+      "content": "Deze sectie behandelt de bekwaamheid van medewerkers, inclusief introductieprogramma's, functietabellen, veiligheidsboekjes en communicatieplannen."
     },
     "ohs_awareness": {
       "title": "4. VGM-bewustzijn",
-      "description": "Verbetering programma's voor VGM-bewustzijn en gedrag, toolboxmeetings, en beoordelingslijsten."
+      "description": "Verbetering programma's voor VGM-bewustzijn en gedrag, toolboxmeetings, en beoordelingslijsten.",
+      "content": "Deze sectie behandelt programma's voor het verbeteren van VGM-bewustzijn en gedrag, toolboxmeetings, en beoordelingslijsten voor VGM-gedrag."
     },
     "ohs_project_plan": {
       "title": "5. VGM-projectplan",
-      "description": "VGM-projectplannen voor projecten met VGM-vereisten en maatregelen."
+      "description": "VGM-projectplannen voor projecten met VGM-vereisten en maatregelen.",
+      "content": "Deze sectie bevat VGM-projectplannen voor projecten met specifieke VGM-vereisten en maatregelen."
     },
     "emergency_situations": {
       "title": "6. Noodsituaties",
-      "description": "Noodprocedures, alarmkaarten, en nooduitrusting."
+      "description": "Noodprocedures, alarmkaarten, en nooduitrusting.",
+      "content": "Deze sectie behandelt noodprocedures, alarmkaarten en nooduitrusting voor verschillende noodsituaties."
     },
     "inspections": {
       "title": "7. Inspecties",
-      "description": "Regelmatige inspecties, inspectieresultaten, en correctieve maatregelen."
+      "description": "Regelmatige inspecties, inspectieresultaten, en correctieve maatregelen.",
+      "content": "Deze sectie bevat informatie over regelmatige inspecties, inspectieresultaten en correctieve maatregelen."
     },
     "health": {
       "title": "8. Gezondheid",
-      "description": "Gezondheidsprogramma's, gezondheidsmonitoring, en kundigheid medisch deskundige."
+      "description": "Gezondheidsprogramma's, gezondheidsmonitoring, en kundigheid medisch deskundige.",
+      "content": "Deze sectie behandelt gezondheidsprogramma's, gezondheidsmonitoring en de kundigheid van medisch deskundigen."
     },
     "resources": {
       "title": "9. Middelen",
-      "description": "VGM specificatie arbeid middelen en overzicht beheer arbeid middelen."
+      "description": "VGM specificatie arbeid middelen en overzicht beheer arbeid middelen.",
+      "content": "Deze sectie bevat VGM-specificaties voor arbeidsmiddelen en een overzicht van het beheer van arbeidsmiddelen."
     },
     "procurement_services": {
       "title": "10. Inkoop van diensten",
-      "description": "Inkoopprocedures voor diensten, VCA-gecertificeerde onderaannemers, en leveranciersbeheer."
+      "description": "Inkoopprocedures voor diensten, VCA-gecertificeerde onderaannemers, en leveranciersbeheer.",
+      "content": "Deze sectie behandelt inkoopprocedures voor diensten, VCA-gecertificeerde onderaannemers en leveranciersbeheer."
     },
     "ohs_incidents": {
       "title": "11. VGM-incidenten",
-      "description": "Registratie, onderzoek, en correctieve maatregelen voor VGM-incidenten."
+      "description": "Registratie, onderzoek, en correctieve maatregelen voor VGM-incidenten.",
+      "content": "Deze sectie behandelt de registratie, het onderzoek en correctieve maatregelen voor VGM-incidenten."
     }
-  },
-  "settings": {
-    "title": "Instellingen",
-    "language": "Taal",
-    "theme": "Thema",
-    "notifications": "Meldingen"
   },
   "login": {
     "title": "Inloggen op uw account",

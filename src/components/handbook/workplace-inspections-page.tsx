@@ -1,5 +1,6 @@
 'use client'
 
+import { useState } from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
@@ -8,11 +9,16 @@ import { Checkbox } from "@/components/ui/checkbox"
 import { useTranslations } from 'next-intl'
 import { ChevronLeft, ChevronRight, ChevronsLeft, ChevronsRight } from "lucide-react"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { VCANavigation } from "@/components/vca-navigation"
 import { Link } from "@/i18n/routing"
+import { MatchedRoute } from '@/lib/route-resolver'
 
-export function WorkplaceInspectionsPage() {
+interface WorkplaceInspectionsPageProps {
+  route?: MatchedRoute
+}
+
+export function WorkplaceInspectionsPage(_props?: WorkplaceInspectionsPageProps) {
   const t = useTranslations('handbook.structure');
+  const [pageSize, setPageSize] = useState<string>('30')
   
   const moduleTitle = t('workplace_inspections');
 
@@ -31,8 +37,6 @@ export function WorkplaceInspectionsPage() {
 
   return (
     <div className="flex flex-1 flex-col gap-6">
-      {/* VCA Navigation */}
-      <VCANavigation />
 
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
         {/* Main Content */}
@@ -131,7 +135,7 @@ export function WorkplaceInspectionsPage() {
                 </div>
                 
                 <div className="flex items-center gap-2">
-                  <Select defaultValue="30">
+                  <Select value={pageSize} onValueChange={setPageSize}>
                     <SelectTrigger className="w-[70px]">
                       <SelectValue />
                     </SelectTrigger>

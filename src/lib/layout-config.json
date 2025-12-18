@@ -1,0 +1,67 @@
+{
+  "layouts": {
+    "vca": {
+      "component": "VcaLayout",
+      "navigation": "VCANavigation",
+      "grid": {
+        "main": "md:col-span-6",
+        "sidebar": "md:col-span-3",
+        "rightSidebar": "md:col-span-3"
+      },
+      "showNavigation": true,
+      "showSidebar": true,
+      "showRightSidebar": true
+    },
+    "iso-9001": {
+      "component": "DefaultLayout",
+      "navigation": null,
+      "grid": {
+        "main": "md:col-span-9",
+        "sidebar": "md:col-span-3"
+      },
+      "showNavigation": false,
+      "showSidebar": true
+    },
+    "iso-45001": {
+      "component": "DefaultLayout",
+      "navigation": null,
+      "grid": {
+        "main": "md:col-span-9",
+        "sidebar": "md:col-span-3"
+      },
+      "showNavigation": false,
+      "showSidebar": true
+    },
+    "hkz-kleine-organisaties-2021": {
+      "component": "DefaultLayout",
+      "navigation": null,
+      "grid": {
+        "main": "md:col-span-9",
+        "sidebar": "md:col-span-3"
+      },
+      "showNavigation": false,
+      "showSidebar": true
+    },
+    "hkz-vvt": {
+      "component": "DefaultLayout",
+      "navigation": null,
+      "grid": {
+        "main": "md:col-span-9",
+        "sidebar": "md:col-span-3"
+      },
+      "showNavigation": false,
+      "showSidebar": true
+    },
+    "default": {
+      "component": "DefaultLayout",
+      "navigation": null,
+      "grid": {
+        "main": "md:col-span-10",
+        "sidebar": "md:col-span-2"
+      },
+      "showNavigation": false,
+      "showSidebar": true
+    }
+  }
+}
+

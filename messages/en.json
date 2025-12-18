@@ -168,6 +168,8 @@
       "internal_audit_reports": "Internal Audit Reports",
       "external_audit_reports": "External Audit Reports",
       "management_reviews": "Management Reviews",
+      "internal_audit_report": "Internal Audit Report",
+      "management_review_year_plan": "Management Review/Year Plan",
       "risks": "Risks",
       "frm_tra": "FRM TRA",
       "risk_inventory_evaluation": "Risk Inventory and Evaluation (RIE)",
@@ -533,14 +535,79 @@
   "vca_content": {
     "general": {
       "title": "General",
-      "description": "General information and relevant laws and regulations for VCA compliance."
+      "description": "General information and relevant laws and regulations for VCA compliance.",
+      "laws_regulations": {
+        "title": "Relevant laws and regulations",
+        "regulations": [
+          {
+            "name": "Arbowet",
+            "url": "https://wetten.overheid.nl/BWBR0010346",
+            "administrator": "Government"
+          },
+          {
+            "name": "Arbobesluit",
+            "url": "https://wetten.overheid.nl/BWBR0008498",
+            "administrator": "Government"
+          },
+          {
+            "name": "Arboregeling",
+            "url": "https://wetten.overheid.nl/BWBR0008587",
+            "administrator": "Government"
+          },
+          {
+            "name": "Arbocatalogus bouw en infra",
+            "url": "http://www.arbocatalogus-bouweninfra.nl/",
+            "administrator": "Social partners"
+          },
+          {
+            "name": "Besluit inzamelen afvalstoffen",
+            "url": "http://wetten.overheid.nl/BWBR0016530/",
+            "administrator": "Government"
+          },
+          {
+            "name": "Regeling VIHB",
+            "url": "http://wetten.overheid.nl/BWBR0016608/",
+            "administrator": "Government"
+          },
+          {
+            "name": "Regeling Europese afvalstoffenlijst",
+            "url": "http://wetten.overheid.nl/BWBR0013546/",
+            "administrator": "Government"
+          },
+          {
+            "name": "Regeling integrale tekst Afvalstoffenlijst",
+            "url": "http://wetten.overheid.nl/BWBR0013549/",
+            "administrator": "Government"
+          },
+          {
+            "name": "Wet milieubeheer",
+            "url": "http://wetten.overheid.nl/BWBR0003245/",
+            "administrator": "Government"
+          },
+          {
+            "name": "Landelijk Afvalbeheer Plan 3 (LAP3)",
+            "url": "https://lap3.nl/",
+            "administrator": "Government"
+          },
+          {
+            "name": "PGS 15",
+            "url": "https://publicatiereeksgevaarlijkestoffen.nl/publicaties/PGS15.html",
+            "administrator": "Government"
+          },
+          {
+            "name": "VCA",
+            "url": "https://www.vca.nl/application/files/3015/8084/7119/VCA-checklist-2017-6-0.pdf",
+            "administrator": "Director"
+          }
+        ]
+      }
     },
     "policy": {
       "title": "1. Policy",
       "description": "The VCA policy section covers policy statements, organizational structure, job descriptions, assessments, and management reviews.",
       "policy_statement": {
         "title": "Policy Statement (VCA 1.1)",
-        "content": "Management has established and confirmed (by signature) the OHS policy in a policy statement. This statement is evaluated every three years and updated as necessary.\n\nThe policy statement is communicated throughout the company through the introduction/information program for (new) own and temporary employees. The policy is also communicated to employees.",
+        "content": "The board of Optic Infra is aware of its responsibility regarding the care for Safety, Health, Welfare and Environment (VGWM).\n\nCreating and maintaining safe and environmentally responsible working conditions are important objectives in our organization and a fixed part of the general business policy. The VGWM policy aims to prevent personal injury, fires, damage and exposure to hazardous substances as well as to limit negative effects on the environment as much as possible. In addition, in the case of (partial) work disability of employees in service after, for example, an accident or occupational disease, in consultation with the Occupational Health Service and other experts, suitable work within the organization will be sought. The Gatekeeper Act will also be complied with.\n\nTo the best of our ability, we will act in our organization in such a way that Safety, Health, Welfare and Environment with respect to our employees, temporary employees, temporary workers, clients, subcontractors, visitors and third parties is guaranteed and they are not exposed to unacceptable risks, discrimination, intimidation and violence.\n\nCare will be taken to ensure that government rules are strictly complied with and continuous improvement will be strived for in the field of Safety, Health, Welfare and Environment.\n\nWithin the company, everyone is informed and kept informed about VGWM responsibilities, procedures and instructions. This is done through information, training and instruction. Management has established and confirmed (by signature) the OHS policy in a policy statement. This statement is evaluated every three years and updated as necessary.\n\nThe policy statement is communicated throughout the company through the introduction/information program for (new) own and temporary employees. The policy is also communicated to employees.",
         "references": ["Policy Statement"]
       },
       "ohs_officer": {
@@ -552,6 +619,18 @@
         "title": "OHS Structure (VCA 1.3)",
         "content": "The OHS structure is schematically shown in the organization chart.\n\nJob descriptions are available for all management positions and the OHS officer, in which tasks, responsibilities, and authorities are clearly described.",
         "references": ["Organization Chart", "Director Job Description", "Executor Job Description", "OHS Officer Job Description"]
+      },
+      "job_description_director": {
+        "title": "Job Description Director",
+        "content": "Place in the organization\nAs director ultimately responsible for the entire company. Reports to the shareholders.\n\nIs ultimately responsible and ensures the implementation of:\n- the business policy;\n- the OHS policy;\n- the personnel policy.\n\nTasks and responsibilities\n- safeguarding the continuity of the enterprise;\n- maintaining contacts with clients, subcontractors and other stakeholders;\n- the assessment of the management system;\n- periodically (at least 4 times a year) carrying out a workplace inspection;\n- organizing consultations (including toolbox meetings);\n- guidance of employees;\n- daily implementation of personnel, OHS and training policy;\n- handling complaints, shortcomings, accidents and incidents and reporting.\n\nReplacement\nThe director is replaced by the administration for administrative and financial matters and by the executor for project matters."
+      },
+      "job_description_executor": {
+        "title": "Job Description Executor",
+        "content": "Place in the organization\nAs an operational manager, accountable to the director.\n\nTasks and responsibilities\n- daily execution of the project and the associated safeguarding of OHS;\n- ensuring an efficient work sequence and layout;\n- material and equipment management at the work location;\n- enforcement and coordination of rules regarding safety, health, and environment at the workplace (OHS-project coordinator);\n- maintaining contacts on behalf of the company with: supervisors from/on behalf of clients, residents, in some cases with clients, if necessary together with the executor, other stakeholders;\n- training new employees;\n- stopping work in case of imminent danger to safety, health, or the environment;\n- giving instructions and assignments to employees.\n\nReplacement\nThe executor is replaced by the director, a colleague executor, or an experienced foreman.\n\nJob requirements\n- MBO-level in a technical field;\n- valid certificate Safety for Operational Managers VCA (VOL-VCA);\n- valid Driving License BE"
+      },
+      "job_description_vgm_officer": {
+        "title": "Job Description OHS Officer",
+        "content": "Place in the organization\nThe OHS officer is accountable to the director. He has no managerial tasks.\n\nThe OHS officer also fulfills the role of prevention officer within the company.\n\nResponsibility\nThe OHS officer is co-responsible for coordinating the OHS aspects within the company during daily operations and ensuring the input of expertise. He is also responsible for implementing and maintaining the management system in accordance with legal and normative requirements.\n\nTasks/responsibilities\n- Drafting and maintaining the management system.\n- Performing internal audits.\n- Supporting the execution of risk inventory and evaluation and task risk analyses.\n- Processing OHS registrations, reporting findings to management.\n- Supervising compliance with the management system and intervening if necessary to adjust;\n- Handling accidents and deficiencies: investigation/root cause analysis, corrective measures, implementation, registration.\n- Advising on safety, health, and environment (management, organization).\n- Preparing management review (presenting information, registration).\n- Monitoring safety, health, and well-being of employees (if necessary with support from occupational health service or other external experts).\n\nAuthorities\n- All authorities to carry out the above tasks.\n- Taking corrective and preventive measures.\n- Intervening in the business process if necessary.\n- Interrupting work activities where necessary to provide instruction and/or explanation.\n\nEducation and experience requirements\n- MBO work and thinking level.\n- Acquired industry-related expertise in the field of safety, health, and environment (including applicable laws and regulations).\n- Good command of the Dutch language in speech and writing.\n- Good communication skills.\n- Good knowledge of the own quality system.\n- Valid VOL-VCA diploma with (safety support is provided by KAM advisor).\n- Preferably external training as internal auditor.\n\nNote: The safety support must demonstrably possess a diploma in Middle Safety Science (MVK), Higher Safety Science (HVK) or the Belgian equivalents Prevention Advisor Level II or Level I.\n\nReplacement\nIn case of absence, the tasks are performed by the director or delegated to the external advisor."
       },
       "management_assessment": {
         "title": "Management Assessment (VCA 1.4)",

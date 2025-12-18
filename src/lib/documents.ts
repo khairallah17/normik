@@ -592,6 +592,26 @@ export const documentRegistry: Record<string, HandbookDocument[]> = {
     }
   ],
   // VCA Documents
+  "/dashboard/vca/general": [
+    {
+      "id": "doc-vca-general-kvk",
+      "name": "KVK-uittreksel Optic Infra B.V..pdf",
+      "description": "",
+      "type": "pdf",
+      "path": "/documents/vca/general/KVK-uittreksel Optic Infra B.V..pdf",
+      "size": "245.3 KB",
+      "lastModified": "2025-12-15"
+    },
+    {
+      "id": "doc-vca-general-organogram",
+      "name": "Organogram maart 2023.pdf",
+      "description": "",
+      "type": "pdf",
+      "path": "/documents/vca/general/Organogram maart 2023.pdf",
+      "size": "156.8 KB",
+      "lastModified": "2025-12-15"
+    }
+  ],
   "/dashboard/handbook/vca/risks": [
     {
       "id": "vca-risks-1",
@@ -877,11 +897,19 @@ export function getDocumentsForSection(path: string): HandbookDocument[] {
       return documentRegistry[normalizedPath];
     }
     
+    // Also check the new /dashboard/vca/ format
+    const newVcaPath = normalizedPath.replace('/dashboard/handbook/vca/', '/dashboard/vca/');
+    if (documentRegistry[newVcaPath]) {
+      return documentRegistry[newVcaPath];
+    }
+    
     // Try to find documents in the registry with matching path patterns
-    const vcaPath = normalizedPath.replace('/dashboard/handbook/', '');
-    const matchingPaths = Object.keys(documentRegistry).filter(regPath => 
-      regPath.includes(vcaPath) || vcaPath.includes(regPath.replace('/dashboard/handbook/', ''))
-    );
+    // Handle both /dashboard/vca/ and /dashboard/handbook/vca/ paths
+    const vcaPath = normalizedPath.replace('/dashboard/handbook/', '').replace('/dashboard/', '');
+    const matchingPaths = Object.keys(documentRegistry).filter(regPath => {
+      const regVcaPath = regPath.replace('/dashboard/handbook/', '').replace('/dashboard/', '');
+      return regVcaPath.includes(vcaPath) || vcaPath.includes(regVcaPath);
+    });
     
     if (matchingPaths.length > 0) {
       return matchingPaths.flatMap(p => documentRegistry[p]);

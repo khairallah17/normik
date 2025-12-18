@@ -1,8 +1,8 @@
 'use client'
 
-import { useState, useMemo } from 'react'
+import { useMemo } from 'react'
 import { useTranslations } from 'next-intl'
-import { User, UserFilters } from '@/types/users'
+import { User } from '@/types/users'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Checkbox } from '@/components/ui/checkbox'
@@ -31,13 +31,17 @@ import {
   Phone,
   Calendar
 } from 'lucide-react'
+import { useAppDispatch, useAppSelector } from '@/store/hooks'
+import { setSelectedUsers, toggleUserSelection, clearSelection, setNameFilter, setUsernameFilter, setEmployeeNumberFilter } from '@/store/slices/usersSlice'
 
 interface UsersTableProps {
   users: User[]
   onEditUser: (user: User) => void
   onDeleteUser: (user: User) => void
   onViewUser: (user: User) => void
-  onBulkAction: (action: string, userIds: string[]) => void
+  onBulkAction?: (action: string, userIds: string[]) => void
+  selectedUsers?: string[]
+  onSelectionChange?: (userIds: string[]) => void
 }
 
 /**
@@ -54,8 +58,9 @@ export function UsersTable({
   onBulkAction 
 }: UsersTableProps) {
   const t = useTranslations('users')
-  const [filters, setFilters] = useState<UserFilters>({})
-  const [selectedUsers, setSelectedUsers] = useState<string[]>([])
+  const dispatch = useAppDispatch()
+  const selectedUsers = useAppSelector((state) => state.users.selectedUsers)
+  const filters = useAppSelector((state) => state.users.filters)
 
   // Filter users based on current filters
   const filteredUsers = useMemo(() => {
@@ -78,17 +83,17 @@ export function UsersTable({
 
   const handleSelectAll = (checked: boolean) => {
     if (checked) {
-      setSelectedUsers(filteredUsers.map(user => user.id))
+      dispatch(setSelectedUsers(filteredUsers.map(user => user.id)))
     } else {
-      setSelectedUsers([])
+      dispatch(clearSelection())
     }
   }
 
   const handleSelectUser = (userId: string, checked: boolean) => {
     if (checked) {
-      setSelectedUsers(prev => [...prev, userId])
+      dispatch(toggleUserSelection(userId))
     } else {
-      setSelectedUsers(prev => prev.filter(id => id !== userId))
+      dispatch(toggleUserSelection(userId))
     }
   }
 
@@ -113,7 +118,7 @@ export function UsersTable({
           <Input
             placeholder={t('filter_name')}
             value={filters.name || ''}
-            onChange={(e) => setFilters(prev => ({ ...prev, name: e.target.value }))}
+            onChange={(e) => dispatch(setNameFilter(e.target.value))}
             className="max-w-xs"
           />
         </div>
@@ -121,7 +126,7 @@ export function UsersTable({
           <Input
             placeholder={t('filter_username')}
             value={filters.username || ''}
-            onChange={(e) => setFilters(prev => ({ ...prev, username: e.target.value }))}
+            onChange={(e) => dispatch(setUsernameFilter(e.target.value))}
             className="max-w-xs"
           />
         </div>
@@ -129,7 +134,7 @@ export function UsersTable({
           <Input
             placeholder={t('filter_employee')}
             value={filters.employeeNumber || ''}
-            onChange={(e) => setFilters(prev => ({ ...prev, employeeNumber: e.target.value }))}
+            onChange={(e) => dispatch(setEmployeeNumberFilter(e.target.value))}
             className="max-w-xs"
           />
         </div>

@@ -29,11 +29,12 @@ export function WpiSchedulerPage() {
   
   // Form state
   const [planDatum, setPlanDatum] = useState<string>('')
-  const [type, setType] = useState<string>('')
+  const [type, setType] = useState<string | undefined>(undefined)
   const [titel, setTitel] = useState<string>('')
   const [nr, setNr] = useState<string>('')
   const [naamInspecteur, setNaamInspecteur] = useState<string>('')
   const [locatie, setLocatie] = useState<string>('')
+  const [pageSize, setPageSize] = useState<string>('30')
 
   const years = [
     { value: '2026', label: '2026 (0)' },
@@ -47,7 +48,6 @@ export function WpiSchedulerPage() {
   ]
 
   const formTypes = [
-    { value: '', label: '- selecteer -' },
     { value: 'copy-1', label: 'Kopie (1) van Nieuwe werkplekinspectie template' },
     { value: 'new-template', label: 'Nieuwe werkplekinspectie template' },
   ]
@@ -58,7 +58,7 @@ export function WpiSchedulerPage() {
     setIsDialogOpen(false)
     // Reset form
     setPlanDatum('')
-    setType('')
+    setType(undefined)
     setTitel('')
     setNr('')
     setNaamInspecteur('')
@@ -86,7 +86,7 @@ export function WpiSchedulerPage() {
     setIsDialogOpen(false)
     // Reset form
     setPlanDatum('')
-    setType('')
+    setType(undefined)
     setTitel('')
     setNr('')
     setNaamInspecteur('')
@@ -276,7 +276,7 @@ export function WpiSchedulerPage() {
             </div>
             
             <div className="flex items-center gap-2">
-              <Select defaultValue="30">
+              <Select value={pageSize} onValueChange={setPageSize}>
                 <SelectTrigger className="w-[70px]">
                   <SelectValue />
                 </SelectTrigger>
@@ -297,15 +297,15 @@ export function WpiSchedulerPage() {
 
       {/* Schedule Dialog */}
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
-        <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
-          <DialogHeader>
-            <DialogTitle>Werkplekinspectie inplannen</DialogTitle>
-            <DialogDescription>
+        <DialogContent className="w-[95vw] sm:w-full max-w-2xl max-h-[90vh] flex flex-col p-4 sm:p-6">
+          <DialogHeader className="flex-shrink-0">
+            <DialogTitle className="text-lg sm:text-xl">Werkplekinspectie inplannen</DialogTitle>
+            <DialogDescription className="text-sm">
               Vul de gegevens in om een nieuwe werkplekinspectie in te plannen
             </DialogDescription>
           </DialogHeader>
 
-          <form className="space-y-4">
+          <form className="space-y-4 flex-1 overflow-y-auto min-h-0">
             {/* Plan datum */}
             <div className="space-y-2">
               <Label htmlFor="plan-datum">Plan datum</Label>
@@ -321,7 +321,7 @@ export function WpiSchedulerPage() {
             {/* Type */}
             <div className="space-y-2">
               <Label htmlFor="form-type">Type</Label>
-              <Select value={type} onValueChange={setType}>
+              <Select value={type} onValueChange={(value) => setType(value)}>
                 <SelectTrigger id="form-type" className="w-full">
                   <SelectValue placeholder="- selecteer -" />
                 </SelectTrigger>
@@ -388,32 +388,33 @@ export function WpiSchedulerPage() {
             </div>
           </form>
 
-          <DialogFooter className="flex gap-2">
+          <DialogFooter className="flex flex-wrap gap-2 flex-shrink-0">
             <Button
               type="button"
               variant="outline"
               onClick={handleCancel}
+              className="w-full sm:w-auto sm:order-1"
             >
               Annuleren
             </Button>
             <Button
               type="button"
               onClick={handleSave}
-              className="bg-[#0066CC] hover:bg-[#004499] text-white"
+              className="bg-[#0066CC] hover:bg-[#004499] text-white w-full sm:w-auto sm:order-2"
             >
               Opslaan
             </Button>
             <Button
               type="button"
               onClick={handleSaveAndNew}
-              className="bg-[#0066CC] hover:bg-[#004499] text-white"
+              className="bg-[#0066CC] hover:bg-[#004499] text-white w-full sm:w-auto sm:order-3"
             >
               Opslaan en nieuw
             </Button>
             <Button
               type="button"
               onClick={handleSaveAndClose}
-              className="bg-[#0066CC] hover:bg-[#004499] text-white"
+              className="bg-[#0066CC] hover:bg-[#004499] text-white w-full sm:w-auto sm:order-4"
             >
               Opslaan en sluiten
             </Button>

@@ -251,7 +251,7 @@ export const vcaStructure: TreeNode[] = [
     titleKey: "general",
     url: "/dashboard/vca/general",
     children: [
-      { id: "1-8-0-1", titleKey: "laws_regulations", url: "/dashboard/vca/general/laws-regulations" },
+      { id: "1-8-0-1", titleKey: "relevant_laws_regulations", url: "/dashboard/vca/general/laws-regulations" },
     ],
   },
   {
